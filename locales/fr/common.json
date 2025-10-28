@@ -1,51 +1,162 @@
 {
+  "siteName": "Breeze Villa",
+  "tagline": "Où le Luxe Rencontre le Paradis",
   "header": {
     "home": "Accueil",
-    "about": "À propos",
+    "about": "À Propos",
     "suites": "Suites",
     "gallery": "Galerie",
     "around": "Alentours",
     "contact": "Contact"
   },
   "footer": {
-    "address": "Breeze Villa, Île Paradisiaque, Côte Tropicale",
-    "phone": "+1 (555) 123-4567",
-    "email": "bonjour@breezevilla.com",
-    "copyright": "© 2024 Breeze Villa. Tous droits réservés."
+    "tagline": "Votre évasion tropicale de luxe",
+    "address": "Breeze Villa, Sunset Beach Road, Bali 80361, Indonésie",
+    "phone": "+62 361 847 5678",
+    "email": "reservations@breezevilla.com",
+    "copyright": "© 2024 Breeze Villa. Tous droits réservés.",
+    "followUs": "Suivez-Nous"
   },
   "home": {
-    "heroTitle": "Bienvenue à Breeze Villa",
-    "heroSubtitle": "Votre évasion tropicale de luxe",
-    "heroCta": "Explorer la Villa",
-    "introTitle": "Découvrez le Paradis",
-    "introText": "Découvrez le mélange parfait entre luxe et nature à Breeze Villa.",
-    "bookCta": "Réserver Votre Séjour"
+    "heroTitle": "Échappez-Vous au Paradis",
+    "heroSubtitle": "Vivez un luxe inégalé dans notre sanctuaire exclusif en bord de mer",
+    "heroCta": "Découvrir Nos Suites",
+    "introTitle": "Où les Rêves Deviennent Réalité",
+    "introText": "Nichée le long du littoral immaculé de Bali, Breeze Villa offre une expérience de luxe intime où l'élégance contemporaine s'harmonise avec la beauté tropicale. Chaque instant ici est créé à la perfection.",
+    "suitesCard": {
+      "title": "Suites Luxueuses",
+      "description": "Plongez dans des hébergements spacieux offrant des vues panoramiques sur l'océan, des terrasses privées et des équipements de classe mondiale conçus pour un confort ultime."
+    },
+    "galleryCard": {
+      "title": "Voyage Visuel",
+      "description": "Explorez notre magnifique propriété à travers une collection d'images soigneusement sélectionnées présentant la beauté et l'élégance qui vous attendent."
+    },
+    "contactCard": {
+      "title": "Planifiez Votre Évasion",
+      "description": "Notre équipe de conciergerie dévouée est prête à créer votre escapade tropicale parfaite avec un service personnalisé et une attention aux détails."
+    },
+    "testimonialTitle": "Expériences de Nos Hôtes",
+    "testimonialQuote": "Breeze Villa a redéfini le luxe pour nous. De l'architecture à couper le souffle au service impeccable, chaque détail a dépassé nos plus hautes attentes. Les vues sur le coucher de soleil depuis notre suite étaient tout simplement inoubliables.",
+    "testimonialAuthor": "Emma & Thomas Richardson",
+    "testimonialLocation": "Londres, Royaume-Uni",
+    "ctaTitle": "Commencez Votre Voyage",
+    "ctaSubtitle": "Découvrez pourquoi Breeze Villa est le refuge le plus exclusif de Bali",
+    "ctaCta": "Réserver Votre Suite"
   },
   "about": {
-    "title": "À propos de Breeze Villa",
-    "philosophy": "Notre Philosophie",
-    "team": "L'Équipe"
+    "title": "Notre Histoire",
+    "subtitle": "Un sanctuaire né de la passion et du sens",
+    "storyTitle": "La Vision Derrière Breeze Villa",
+    "storyParagraph1": "Breeze Villa est née d'un rêve de créer un sanctuaire extraordinaire où la brillance architecturale rencontre la splendeur naturelle. Fondée en 2019, notre propriété boutique représente l'aboutissement d'un design méticuleux, d'un luxe durable et d'un profond respect pour la culture balinaise.",
+    "storyParagraph2": "Chaque élément de Breeze Villa a été soigneusement conçu pour offrir aux voyageurs exigeants une évasion intime. Du bois de teck d'origine locale aux meubles balinais fabriqués à la main, nous mélangeons sophistication contemporaine et héritage insulaire authentique pour créer une expérience qui transcende l'hospitalité ordinaire.",
+    "philosophyTitle": "Notre Philosophie",
+    "philosophySubtitle": "Trois piliers qui définissent notre engagement envers l'excellence",
+    "philosophy1Title": "Luxe Durable",
+    "philosophy1Text": "Nous croyons que le vrai luxe respecte l'environnement. Nos pratiques éco-conscientes, de l'énergie solaire aux jardins biologiques, garantissent que votre séjour a un impact minimal tout en maximisant le confort.",
+    "philosophy2Title": "Expériences Authentiques",
+    "philosophy2Text": "Au-delà de l'hébergement, nous créons des connexions significatives avec la culture balinaise, les artisans locaux et les merveilles naturelles, créant des souvenirs qui durent toute une vie.",
+    "philosophy3Title": "Service Personnalisé",
+    "philosophy3Text": "Vos désirs façonnent votre expérience. Notre personnel dévoué anticipe vos besoins, offrant des services sur mesure qui transforment votre séjour en quelque chose de vraiment extraordinaire.",
+    "teamTitle": "L'Équipe",
+    "teamSubtitle": "Professionnels passionnés dédiés à votre évasion parfaite",
+    "teamText": "Notre équipe internationale rassemble des vétérans de l'hospitalité, des experts culturels locaux et des spécialistes du bien-être. Unis par une passion pour l'excellence, ils garantissent que chaque invité reçoit des soins personnalisés qui dépassent les attentes. De notre chef primé à nos praticiens certifiés en bien-être, chaque membre contribue à la magie de Breeze Villa."
   },
   "suites": {
-    "title": "Nos Suites"
+    "title": "Suites Luxueuses",
+    "subtitle": "Sanctuaires soigneusement conçus offrant confort et style sans compromis",
+    "amenitiesTitle": "Équipements Premium",
+    "amenitiesSubtitle": "Chaque détail considéré pour votre confort ultime",
+    "suite1": {
+      "name": "Suite Horizon Océan",
+      "description": "Des vues panoramiques sur l'océan rencontrent l'élégance contemporaine dans ce sanctuaire de 65m². Les baies vitrées encadrent des horizons bleus infinis tandis que votre terrasse privée offre le point de vue parfait pour des levers de soleil spectaculaires.",
+      "price": "À partir de 450$/nuit"
+    },
+    "suite2": {
+      "name": "Villa Oasis Jardin",
+      "description": "Entourée de jardins tropicaux luxuriants, cette villa privée de 85m² dispose d'une douche extérieure à effet pluie et d'un accès direct à la piscine. Vivez l'harmonie parfaite entre luxe intérieur et tranquillité extérieure.",
+      "price": "À partir de 650$/nuit"
+    },
+    "suite3": {
+      "name": "Pavillon Coucher de Soleil",
+      "description": "Une retraite exclusive de 120m² dotée d'une piscine à débordement privée parfaitement alignée avec les couchers de soleil légendaires de Bali. Ce chef-d'œuvre architectural redéfinit le luxe de vie.",
+      "price": "À partir de 950$/nuit"
+    },
+    "suite4": {
+      "name": "Sanctuaire Présidentiel",
+      "description": "L'expression ultime du luxe. S'étendant sur 200m², ce havre de trois chambres comprend un chef privé, un service de majordome, une piscine à débordement et des panoramas océaniques à 270 degrés sans obstruction.",
+      "price": "À partir de 1 800$/nuit"
+    }
   },
   "gallery": {
-    "title": "Galerie"
+    "title": "Voyage Visuel",
+    "subtitle": "Découvrez la beauté et l'élégance qui définissent Breeze Villa",
+    "lightboxNote": "Cliquez sur n'importe quelle image pour l'afficher en plein écran"
   },
   "around": {
-    "title": "Découvrir Autour de Breeze Villa",
-    "beach": "Plage",
-    "restaurant": "Restaurant Local",
-    "sunset": "Spot Coucher de Soleil",
-    "culture": "Temple & Marché"
+    "title": "Explorer le Paradis",
+    "subtitle": "Découvrez les merveilles entourant Breeze Villa",
+    "attractionsTitle": "Trésors à Proximité",
+    "activitiesTitle": "Expériences Organisées",
+    "activitiesSubtitle": "Aventures inoubliables organisées par notre conciergerie",
+    "ctaTitle": "Laissez-Nous Créer Votre Journée Parfaite",
+    "ctaSubtitle": "Notre équipe de conciergerie experte organise chaque détail",
+    "ctaCta": "Contacter la Conciergerie",
+    "beach": {
+      "title": "Plage du Coucher de Soleil",
+      "description": "Du sable blanc immaculé rencontre des eaux cristallines à seulement 50 mètres de votre villa. Nagez, explorez les récifs coralliens vibrants, ou simplement détendez-vous sous les palmiers en regardant les levers de soleil envoûtants peindre l'horizon."
+    },
+    "restaurant": {
+      "title": "Warung Pantai",
+      "description": "Une expérience culinaire balinaise authentique mettant en vedette les fruits de mer les plus frais et des recettes traditionnelles transmises de génération en génération. Ce joyau familial offre de véritables saveurs insulaires dans un cadre charmant en bord de mer."
+    },
+    "sunset": {
+      "title": "Point de Vue sur la Falaise",
+      "description": "Un sanctuaire caché offrant les vues de coucher de soleil les plus spectaculaires de Bali. Cet endroit serein, à seulement 15 minutes, offre le décor parfait pour des cocktails du soir et des photographies inoubliables."
+    },
+    "culture": {
+      "title": "Temple Tanah Lot & Marché",
+      "description": "Plongez dans la spiritualité balinaise dans ce temple marin emblématique, puis explorez les marchés locaux vibrants regorgeant de textiles artisanaux, bijoux en argent et épices aromatiques."
+    },
+    "activity1": {
+      "title": "Plongée & Snorkeling",
+      "description": "Explorez des jardins de corail prospères grouillant de vie marine tropicale, des tortues de mer gracieuses aux poissons de récif vibrants"
+    },
+    "activity2": {
+      "title": "Aventures Aquatiques",
+      "description": "Expériences de surf, paddle, kayak et voile adaptées à votre niveau de compétence"
+    },
+    "activity3": {
+      "title": "Randonnée en Montagne",
+      "description": "Randonnées au lever du soleil vers le volcan Mont Batur, cascades cachées et sentiers secrets de la jungle"
+    },
+    "activity4": {
+      "title": "Bien-Être & Spa",
+      "description": "Massage balinais traditionnel, séances de yoga et traitements de guérison holistiques"
+    },
+    "activity5": {
+      "title": "Voyages Culinaires",
+      "description": "Cours de cuisine, visites de marchés et expériences gastronomiques privées avec des chefs locaux renommés"
+    },
+    "activity6": {
+      "title": "Immersion Culturelle",
+      "description": "Cérémonies de temple, spectacles de danse traditionnelle et visites d'ateliers d'artisans"
+    }
   },
   "contact": {
-    "title": "Nous Contacter",
-    "name": "Nom",
-    "email": "Email",
-    "arrival": "Arrivée",
-    "departure": "Départ",
-    "message": "Message",
-    "submit": "Envoyer"
+    "title": "Contactez-Nous",
+    "subtitle": "Commencez à planifier votre évasion inoubliable",
+    "formTitle": "Envoyez-Nous un Message",
+    "visitTitle": "Visitez-Nous",
+    "name": "Nom Complet",
+    "email": "Adresse Email",
+    "arrival": "Date d'Arrivée",
+    "departure": "Date de Départ",
+    "message": "Parlez-nous de votre escapade de rêve",
+    "submit": "Envoyer la Demande",
+    "addressLabel": "Adresse",
+    "phoneLabel": "Téléphone",
+    "emailLabel": "Email",
+    "hoursLabel": "Réservations",
+    "hoursText": "Disponible 24h/24 et 7j/7"
   }
 }

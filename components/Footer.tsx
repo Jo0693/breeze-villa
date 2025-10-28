@@ -12,9 +12,9 @@ export default function Footer() {
 
           <div>
             <h4 className="text-lg font-display font-semibold mb-4">Contact</h4>
-            <p className="text-gray-300 font-body mb-2">Breeze Villa, Paradise Island</p>
-            <p className="text-gray-300 font-body mb-2">+1 (555) 123-4567</p>
-            <p className="text-gray-300 font-body">hello@breezevilla.com</p>
+            <p className="text-gray-300 font-body mb-2">Sunset Beach Road, Bali 80361</p>
+            <p className="text-gray-300 font-body mb-2">+62 361 847 5678</p>
+            <p className="text-gray-300 font-body">reservations@breezevilla.com</p>
           </div>
 
           <div>

@@ -1,32 +1,35 @@
+'use client';
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
+import { Anchor, Sun, MapPin, Activity, Coffee, TrendingUp } from 'react-feather';
 
 export default function Around() {
   const attractions = [
     {
-      title: 'Beach',
-      description: 'Pristine white sand beach just steps away from the villa. Perfect for swimming, snorkeling, and watching spectacular sunrises.',
+      title: 'Sunset Beach',
+      description: 'Pristine white sand meets crystal-clear waters just 50 meters from your villa. Swim, snorkel vibrant coral reefs, or simply relax beneath swaying palms while watching mesmerizing sunrises paint the horizon.',
       image: 'https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2940',
       link: '',
     },
     {
-      title: 'Local Restaurant',
-      description: 'Authentic coastal cuisine featuring fresh seafood and local specialties. Experience the flavors of the island.',
+      title: 'Warung Pantai',
+      description: 'An authentic Balinese dining experience featuring the freshest seafood and traditional recipes passed through generations. This family-owned gem offers genuine island flavors in a charming beachfront setting.',
       image: 'https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2940',
       link: '',
     },
     {
-      title: 'Sunset Spot',
-      description: 'A hidden gem offering breathtaking sunset views over the ocean. The perfect place for an evening cocktail.',
+      title: 'Clifftop Viewpoint',
+      description: 'A hidden sanctuary offering Bali\'s most spectacular sunset vistas. This serene spot, just 15 minutes away, provides the perfect backdrop for evening cocktails and unforgettable photographs.',
       image: 'https://images.unsplash.com/photo-1495954484750-af469f2f9be5?q=80&w=2940',
       link: '',
     },
     {
-      title: 'Temple & Market',
-      description: 'Immerse yourself in local culture at the historic temple and vibrant market. Discover traditional crafts and fresh produce.',
+      title: 'Tanah Lot Temple & Market',
+      description: 'Immerse yourself in Balinese spirituality at this iconic sea temple, then explore vibrant local markets brimming with handcrafted textiles, silver jewelry, and aromatic spices.',
       image: 'https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=2940',
       link: '',
     },
@@ -37,8 +40,8 @@ export default function Around() {
       <Header />
       <main>
         <Hero
-          title="Discover Around Breeze Villa"
-          subtitle="Explore the beauty and culture of our surroundings"
+          title="Explore Paradise"
+          subtitle="Discover the wonders surrounding Breeze Villa"
           height="h-[60vh]"
           backgroundImage="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2940"
         />
@@ -46,8 +49,8 @@ export default function Around() {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <SectionTitle
-              title="Local Attractions"
-              subtitle="Experience the best of what our island paradise has to offer"
+              title="Nearby Treasures"
+              subtitle="Authentic experiences just moments from your doorstep"
             />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
@@ -67,48 +70,63 @@ export default function Around() {
 
         <section className="py-20 bg-accent">
           <div className="container mx-auto px-6">
-            <SectionTitle title="Activities & Experiences" />
+            <SectionTitle
+              title="Curated Experiences"
+              subtitle="Unforgettable adventures arranged by our concierge"
+            />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <div className="text-4xl mb-4">🤿</div>
+                <div className="flex justify-center mb-4">
+                  <Anchor className="text-gold" size={40} />
+                </div>
                 <h3 className="text-xl font-display font-bold text-dark mb-3">Diving & Snorkeling</h3>
                 <p className="text-dark/70 font-body">
-                  Explore vibrant coral reefs teeming with marine life
+                  Explore thriving coral gardens teeming with tropical marine life, from graceful sea turtles to vibrant reef fish
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">🚣</div>
-                <h3 className="text-xl font-display font-bold text-dark mb-3">Water Sports</h3>
+                <div className="flex justify-center mb-4">
+                  <Activity className="text-gold" size={40} />
+                </div>
+                <h3 className="text-xl font-display font-bold text-dark mb-3">Water Adventures</h3>
                 <p className="text-dark/70 font-body">
-                  Kayaking, paddleboarding, and sailing adventures
+                  Surfing, paddleboarding, kayaking, and sailing experiences tailored to your skill level
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">🥾</div>
-                <h3 className="text-xl font-display font-bold text-dark mb-3">Hiking Trails</h3>
+                <div className="flex justify-center mb-4">
+                  <MapPin className="text-gold" size={40} />
+                </div>
+                <h3 className="text-xl font-display font-bold text-dark mb-3">Mountain Trekking</h3>
                 <p className="text-dark/70 font-body">
-                  Discover hidden waterfalls and panoramic viewpoints
+                  Sunrise hikes to Mount Batur volcano, hidden waterfalls, and secret jungle trails
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">🧘</div>
+                <div className="flex justify-center mb-4">
+                  <Sun className="text-gold" size={40} />
+                </div>
                 <h3 className="text-xl font-display font-bold text-dark mb-3">Wellness & Spa</h3>
                 <p className="text-dark/70 font-body">
-                  Rejuvenate with yoga sessions and spa treatments
+                  Traditional Balinese massage, yoga sessions, and holistic healing treatments
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">🍽️</div>
-                <h3 className="text-xl font-display font-bold text-dark mb-3">Culinary Tours</h3>
+                <div className="flex justify-center mb-4">
+                  <TrendingUp className="text-gold" size={40} />
+                </div>
+                <h3 className="text-xl font-display font-bold text-dark mb-3">Culinary Journeys</h3>
                 <p className="text-dark/70 font-body">
-                  Taste authentic local cuisine and cooking classes
+                  Cooking classes, market tours, and private dining experiences with renowned local chefs
                 </p>
               </div>
               <div className="text-center">
-                <div className="text-4xl mb-4">📸</div>
-                <h3 className="text-xl font-display font-bold text-dark mb-3">Photography Tours</h3>
+                <div className="flex justify-center mb-4">
+                  <Coffee className="text-gold" size={40} />
+                </div>
+                <h3 className="text-xl font-display font-bold text-dark mb-3">Cultural Immersion</h3>
                 <p className="text-dark/70 font-body">
-                  Capture stunning landscapes with a local photographer
+                  Temple ceremonies, traditional dance performances, and artisan workshop visits
                 </p>
               </div>
             </div>
@@ -118,8 +136,8 @@ export default function Around() {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6 text-center">
             <SectionTitle
-              title="Plan Your Adventure"
-              subtitle="Our concierge team can arrange all activities and experiences"
+              title="Let Us Craft Your Perfect Day"
+              subtitle="Our expert concierge team arranges every detail"
             />
             <a
               href="/contact"

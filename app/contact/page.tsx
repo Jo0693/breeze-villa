@@ -33,8 +33,8 @@ export default function Contact() {
       <Header />
       <main>
         <Hero
-          title="Contact Us"
-          subtitle="Let's plan your perfect getaway"
+          title="Get in Touch"
+          subtitle="Begin planning your unforgettable escape"
           height="h-[60vh]"
           backgroundImage="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2940"
         />
@@ -43,12 +43,12 @@ export default function Contact() {
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
-                <SectionTitle title="Get in Touch" centered={false} />
+                <SectionTitle title="Send Us a Message" centered={false} />
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-dark font-body font-semibold mb-2">
-                      Name
+                      Full Name
                     </label>
                     <input
                       type="text"
@@ -63,7 +63,7 @@ export default function Contact() {
 
                   <div>
                     <label htmlFor="email" className="block text-dark font-body font-semibold mb-2">
-                      Email
+                      Email Address
                     </label>
                     <input
                       type="email"
@@ -79,7 +79,7 @@ export default function Contact() {
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="arrival" className="block text-dark font-body font-semibold mb-2">
-                        Arrival
+                        Arrival Date
                       </label>
                       <input
                         type="date"
@@ -93,7 +93,7 @@ export default function Contact() {
 
                     <div>
                       <label htmlFor="departure" className="block text-dark font-body font-semibold mb-2">
-                        Departure
+                        Departure Date
                       </label>
                       <input
                         type="date"
@@ -108,7 +108,7 @@ export default function Contact() {
 
                   <div>
                     <label htmlFor="message" className="block text-dark font-body font-semibold mb-2">
-                      Message
+                      Tell us about your dream getaway
                     </label>
                     <textarea
                       id="message"
@@ -117,6 +117,7 @@ export default function Contact() {
                       onChange={handleChange}
                       rows={6}
                       required
+                      placeholder="Share your preferences, special occasions, or any questions you may have..."
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold resize-none"
                     />
                   </div>
@@ -125,7 +126,7 @@ export default function Contact() {
                     type="submit"
                     className="w-full bg-gold hover:bg-gold/90 text-white font-body font-semibold px-8 py-4 rounded-md transition-all duration-300 transform hover:scale-105"
                   >
-                    Send Message
+                    Send Inquiry
                   </button>
                 </form>
               </div>
@@ -138,19 +139,24 @@ export default function Contact() {
                     <h4 className="font-display font-semibold text-dark text-lg mb-2">Address</h4>
                     <p className="text-dark/70 font-body">
                       Breeze Villa<br />
-                      Paradise Island<br />
-                      Tropical Coast
+                      Sunset Beach Road<br />
+                      Bali 80361, Indonesia
                     </p>
                   </div>
 
                   <div>
                     <h4 className="font-display font-semibold text-dark text-lg mb-2">Phone</h4>
-                    <p className="text-dark/70 font-body">+1 (555) 123-4567</p>
+                    <p className="text-dark/70 font-body">+62 361 847 5678</p>
                   </div>
 
                   <div>
                     <h4 className="font-display font-semibold text-dark text-lg mb-2">Email</h4>
-                    <p className="text-dark/70 font-body">hello@breezevilla.com</p>
+                    <p className="text-dark/70 font-body">reservations@breezevilla.com</p>
+                  </div>
+
+                  <div>
+                    <h4 className="font-display font-semibold text-dark text-lg mb-2">Reservations</h4>
+                    <p className="text-dark/70 font-body">Available 24/7</p>
                   </div>
 
                   <div className="mt-8">

@@ -25,8 +25,8 @@ export default function Gallery() {
       <Header />
       <main>
         <Hero
-          title="Gallery"
-          subtitle="Discover the beauty of Breeze Villa"
+          title="Visual Journey"
+          subtitle="Discover the beauty and elegance that defines Breeze Villa"
           height="h-[60vh]"
           backgroundImage="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2940"
         />
@@ -35,7 +35,7 @@ export default function Gallery() {
           <div className="container mx-auto px-6">
             <SectionTitle
               title="Explore Our Villa"
-              subtitle="A visual journey through paradise"
+              subtitle="A curated collection showcasing the extraordinary beauty of our property"
             />
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
