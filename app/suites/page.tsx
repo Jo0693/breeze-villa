@@ -72,58 +72,46 @@ export default function Suites() {
 
         <section className="py-20 bg-accent">
           <div className="container mx-auto px-6">
-            <SectionTitle
-              title="Premium Amenities"
-              subtitle="Every detail considered for your ultimate comfort"
-            />
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-              <div className="text-center">
-                <div className="flex justify-center mb-3">
-                  <Home className="text-gold" size={32} />
-                </div>
-                <h4 className="font-display font-semibold text-dark">King-Size Beds</h4>
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-display italic font-bold text-gold mb-4">
+                Premium Amenities
+              </h2>
+              <p className="text-lg text-dark/70 font-body max-w-2xl mx-auto">
+                Every detail considered for your ultimate comfort
+              </p>
+            </div>
+            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6">
+              <div className="flex items-center space-x-2">
+                <Home className="text-gold" size={20} />
+                <span className="font-body text-dark">King-Size Beds</span>
               </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-3">
-                  <Wifi className="text-gold" size={32} />
-                </div>
-                <h4 className="font-display font-semibold text-dark">High-Speed WiFi</h4>
+              <div className="flex items-center space-x-2">
+                <Wifi className="text-gold" size={20} />
+                <span className="font-body text-dark">High-Speed WiFi</span>
               </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-3">
-                  <Tv className="text-gold" size={32} />
-                </div>
-                <h4 className="font-display font-semibold text-dark">Smart TV</h4>
+              <div className="flex items-center space-x-2">
+                <Tv className="text-gold" size={20} />
+                <span className="font-body text-dark">Smart TV</span>
               </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-3">
-                  <Coffee className="text-gold" size={32} />
-                </div>
-                <h4 className="font-display font-semibold text-dark">Minibar</h4>
+              <div className="flex items-center space-x-2">
+                <Coffee className="text-gold" size={20} />
+                <span className="font-body text-dark">Minibar</span>
               </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-3">
-                  <Wind className="text-gold" size={32} />
-                </div>
-                <h4 className="font-display font-semibold text-dark">Air Conditioning</h4>
+              <div className="flex items-center space-x-2">
+                <Wind className="text-gold" size={20} />
+                <span className="font-body text-dark">Air Conditioning</span>
               </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-3">
-                  <Droplet className="text-gold" size={32} />
-                </div>
-                <h4 className="font-display font-semibold text-dark">Luxury Bathroom</h4>
+              <div className="flex items-center space-x-2">
+                <Droplet className="text-gold" size={20} />
+                <span className="font-body text-dark">Luxury Bathroom</span>
               </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-3">
-                  <Smartphone className="text-gold" size={32} />
-                </div>
-                <h4 className="font-display font-semibold text-dark">Concierge Service</h4>
+              <div className="flex items-center space-x-2">
+                <Smartphone className="text-gold" size={20} />
+                <span className="font-body text-dark">Concierge Service</span>
               </div>
-              <div className="text-center">
-                <div className="flex justify-center mb-3">
-                  <Star className="text-gold" size={32} />
-                </div>
-                <h4 className="font-display font-semibold text-dark">Premium Toiletries</h4>
+              <div className="flex items-center space-x-2">
+                <Star className="text-gold" size={20} />
+                <span className="font-body text-dark">Premium Toiletries</span>
               </div>
             </div>
           </div>

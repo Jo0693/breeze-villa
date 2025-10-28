@@ -57,7 +57,8 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold transition-all duration-300"
+                      style={{ borderRadius: '6px' }}
                     />
                   </div>
 
@@ -72,7 +73,8 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold transition-all duration-300"
+                      style={{ borderRadius: '6px' }}
                     />
                   </div>
 
@@ -87,7 +89,8 @@ export default function Contact() {
                         name="arrival"
                         value={formData.arrival}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold transition-all duration-300"
+                        style={{ borderRadius: '6px' }}
                       />
                     </div>
 
@@ -101,7 +104,8 @@ export default function Contact() {
                         name="departure"
                         value={formData.departure}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold transition-all duration-300"
+                        style={{ borderRadius: '6px' }}
                       />
                     </div>
                   </div>
@@ -118,7 +122,8 @@ export default function Contact() {
                       rows={6}
                       required
                       placeholder="Share your preferences, special occasions, or any questions you may have..."
-                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold resize-none"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold resize-none transition-all duration-300"
+                      style={{ borderRadius: '6px' }}
                     />
                   </div>
 

@@ -8,9 +8,17 @@ interface SectionTitleProps {
   title: string;
   subtitle?: string;
   centered?: boolean;
+  italic?: boolean;
+  goldTitle?: boolean;
 }
 
-export default function SectionTitle({ title, subtitle, centered = true }: SectionTitleProps) {
+export default function SectionTitle({
+  title,
+  subtitle,
+  centered = true,
+  italic = false,
+  goldTitle = false
+}: SectionTitleProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
@@ -22,7 +30,13 @@ export default function SectionTitle({ title, subtitle, centered = true }: Secti
       transition={{ duration: 0.6 }}
       className={centered ? 'text-center mb-12' : 'mb-12'}
     >
-      <h2 className="text-4xl md:text-5xl font-display font-bold text-dark mb-4">{title}</h2>
+      <h2 className={`text-4xl md:text-5xl font-display font-bold mb-4 ${
+        italic ? 'italic' : ''
+      } ${
+        goldTitle ? 'text-gold' : 'text-dark'
+      }`}>
+        {title}
+      </h2>
       {subtitle && <p className="text-lg text-dark/70 font-body max-w-2xl mx-auto">{subtitle}</p>}
     </motion.div>
   );

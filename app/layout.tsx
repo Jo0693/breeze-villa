@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-display",
   weight: ["400", "700"],
+  style: ["normal", "italic"],
 });
 
 const inter = Inter({
@@ -28,7 +30,9 @@ export default function RootLayout({
       <body
         className={`${playfair.variable} ${inter.variable} antialiased`}
       >
-        {children}
+        <LanguageProvider>
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

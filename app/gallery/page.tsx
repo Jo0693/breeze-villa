@@ -1,23 +1,62 @@
+'use client';
+
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import SectionTitle from '@/components/SectionTitle';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 export default function Gallery() {
   const images = [
-    'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2940',
-    'https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2940',
-    'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2940',
-    'https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?q=80&w=2940',
-    'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2940',
-    'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2940',
-    'https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2940',
-    'https://images.unsplash.com/photo-1591088398332-8a7791972843?q=80&w=2940',
-    'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=2940',
-    'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=2940',
-    'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2940',
-    'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2940',
+    {
+      url: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2940',
+      title: 'Ocean Suite',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2940',
+      title: 'Garden View',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2940',
+      title: 'Private Pool',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1602343168117-bb8ffe3e2e9f?q=80&w=2940',
+      title: 'Dining Terrace',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=80&w=2940',
+      title: 'Bali Sunset',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2940',
+      title: 'Lounge Area',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2940',
+      title: 'Ocean Suite',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?q=80&w=2940',
+      title: 'Garden View',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=2940',
+      title: 'Private Pool',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=2940',
+      title: 'Dining Terrace',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2940',
+      title: 'Bali Sunset',
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1584132967334-10e028bd69f7?q=80&w=2940',
+      title: 'Lounge Area',
+    },
   ];
 
   return (
@@ -40,18 +79,31 @@ export default function Gallery() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
               {images.map((image, index) => (
-                <div
+                <motion.div
                   key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="relative h-80 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                 >
                   <Image
-                    src={image}
-                    alt={`Gallery image ${index + 1}`}
+                    src={image.url}
+                    alt={image.title}
                     fill
                     className="object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
-                </div>
+                  {/* Overlay with title */}
+                  <div className="absolute inset-0 bg-[rgba(230,221,198,0)] group-hover:bg-[rgba(230,221,198,0.3)] transition-all duration-300 flex items-center justify-center">
+                    <motion.h3
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      whileHover={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.3 }}
+                      className="text-2xl font-display font-semibold text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    >
+                      {image.title}
+                    </motion.h3>
+                  </div>
+                </motion.div>
               ))}
             </div>
 

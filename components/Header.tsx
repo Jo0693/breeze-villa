@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { language, setLanguage } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,22 +52,53 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`font-body transition-colors duration-300 ${
-                    scrolled
-                      ? 'text-dark hover:text-gold'
-                      : 'text-background hover:text-gold'
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="hidden md:flex items-center space-x-8">
+            <ul className="flex space-x-8">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`font-body transition-colors duration-300 ${
+                      scrolled
+                        ? 'text-dark hover:text-gold'
+                        : 'text-background hover:text-gold'
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
+            {/* Language Switcher */}
+            <div className="flex items-center space-x-2 border-l border-gray-400 pl-6">
+              <button
+                onClick={() => setLanguage('en')}
+                className={`font-body text-sm transition-colors duration-300 ${
+                  language === 'en'
+                    ? 'text-gold font-semibold'
+                    : scrolled
+                    ? 'text-dark/70 hover:text-gold'
+                    : 'text-background/70 hover:text-gold'
+                }`}
+              >
+                🇬🇧 EN
+              </button>
+              <span className={scrolled ? 'text-dark/40' : 'text-background/40'}>|</span>
+              <button
+                onClick={() => setLanguage('fr')}
+                className={`font-body text-sm transition-colors duration-300 ${
+                  language === 'fr'
+                    ? 'text-gold font-semibold'
+                    : scrolled
+                    ? 'text-dark/70 hover:text-gold'
+                    : 'text-background/70 hover:text-gold'
+                }`}
+              >
+                🇫🇷 FR
+              </button>
+            </div>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -109,6 +142,33 @@ export default function Header() {
                     </Link>
                   </li>
                 ))}
+
+                {/* Mobile Language Switcher */}
+                <li className="pt-4 border-t border-gray-300 w-full flex justify-center">
+                  <div className="flex items-center space-x-3">
+                    <button
+                      onClick={() => setLanguage('en')}
+                      className={`font-body text-sm transition-colors duration-300 ${
+                        language === 'en'
+                          ? 'text-gold font-semibold'
+                          : 'text-dark/70 hover:text-gold'
+                      }`}
+                    >
+                      🇬🇧 EN
+                    </button>
+                    <span className="text-dark/40">|</span>
+                    <button
+                      onClick={() => setLanguage('fr')}
+                      className={`font-body text-sm transition-colors duration-300 ${
+                        language === 'fr'
+                          ? 'text-gold font-semibold'
+                          : 'text-dark/70 hover:text-gold'
+                      }`}
+                    >
+                      🇫🇷 FR
+                    </button>
+                  </div>
+                </li>
               </ul>
             </motion.div>
           )}
