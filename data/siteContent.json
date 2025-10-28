@@ -1,0 +1,95 @@
+{
+  "siteName": "Breeze Villa",
+  "tagline": "Your luxury tropical escape",
+  "contact": {
+    "address": "Breeze Villa, Paradise Island, Tropical Coast",
+    "phone": "+1 (555) 123-4567",
+    "email": "hello@breezevilla.com"
+  },
+  "socialMedia": {
+    "facebook": "#",
+    "instagram": "#",
+    "twitter": "#"
+  },
+  "suites": [
+    {
+      "id": 1,
+      "title": "Ocean View Suite",
+      "description": "Spacious suite with panoramic ocean views, private terrace, and modern amenities.",
+      "price": "$450/night",
+      "image": "https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2940",
+      "amenities": ["King-size bed", "Private terrace", "Ocean view", "Smart TV", "Minibar"]
+    },
+    {
+      "id": 2,
+      "title": "Garden Villa",
+      "description": "Private villa surrounded by tropical gardens with outdoor shower and pool access.",
+      "price": "$550/night",
+      "image": "https://images.unsplash.com/photo-1591088398332-8a7791972843?q=80&w=2940",
+      "amenities": ["King-size bed", "Private garden", "Outdoor shower", "Pool access", "Minibar"]
+    },
+    {
+      "id": 3,
+      "title": "Sunset Pavilion",
+      "description": "Exclusive pavilion with breathtaking sunset views and private infinity pool.",
+      "price": "$750/night",
+      "image": "https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=2940",
+      "amenities": ["King-size bed", "Private infinity pool", "Sunset view", "Smart TV", "Premium toiletries"]
+    },
+    {
+      "id": 4,
+      "title": "Presidential Suite",
+      "description": "Ultimate luxury with multiple rooms, private chef service, and panoramic views.",
+      "price": "$1200/night",
+      "image": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=2940",
+      "amenities": ["Multiple rooms", "Private chef", "Butler service", "Panoramic views", "Private pool"]
+    }
+  ],
+  "attractions": [
+    {
+      "id": 1,
+      "title": "Beach",
+      "category": "Nature",
+      "description": "Pristine white sand beach just steps away from the villa. Perfect for swimming, snorkeling, and watching spectacular sunrises.",
+      "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2940",
+      "distance": "50m",
+      "partnerLink": ""
+    },
+    {
+      "id": 2,
+      "title": "Local Restaurant",
+      "category": "Dining",
+      "description": "Authentic coastal cuisine featuring fresh seafood and local specialties. Experience the flavors of the island.",
+      "image": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2940",
+      "distance": "500m",
+      "partnerLink": ""
+    },
+    {
+      "id": 3,
+      "title": "Sunset Spot",
+      "category": "Nature",
+      "description": "A hidden gem offering breathtaking sunset views over the ocean. The perfect place for an evening cocktail.",
+      "image": "https://images.unsplash.com/photo-1495954484750-af469f2f9be5?q=80&w=2940",
+      "distance": "300m",
+      "partnerLink": ""
+    },
+    {
+      "id": 4,
+      "title": "Temple & Market",
+      "category": "Culture",
+      "description": "Immerse yourself in local culture at the historic temple and vibrant market. Discover traditional crafts and fresh produce.",
+      "image": "https://images.unsplash.com/photo-1555400038-63f5ba517a47?q=80&w=2940",
+      "distance": "2km",
+      "partnerLink": ""
+    }
+  ],
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Sarah & James",
+      "location": "London",
+      "text": "An absolutely unforgettable experience. The villa exceeded all our expectations with its stunning design, impeccable service, and breathtaking location.",
+      "rating": 5
+    }
+  ]
+}

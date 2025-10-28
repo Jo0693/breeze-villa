@@ -1,0 +1,51 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "suites": "Suites",
+    "gallery": "Gallery",
+    "around": "Around",
+    "contact": "Contact"
+  },
+  "footer": {
+    "address": "Breeze Villa, Paradise Island, Tropical Coast",
+    "phone": "+1 (555) 123-4567",
+    "email": "hello@breezevilla.com",
+    "copyright": "© 2024 Breeze Villa. All rights reserved."
+  },
+  "home": {
+    "heroTitle": "Welcome to Breeze Villa",
+    "heroSubtitle": "Your luxury tropical escape",
+    "heroCta": "Explore the Villa",
+    "introTitle": "Experience Paradise",
+    "introText": "Discover the perfect blend of luxury and nature at Breeze Villa.",
+    "bookCta": "Book Your Stay"
+  },
+  "about": {
+    "title": "About Breeze Villa",
+    "philosophy": "Our Philosophy",
+    "team": "The Team"
+  },
+  "suites": {
+    "title": "Our Suites"
+  },
+  "gallery": {
+    "title": "Gallery"
+  },
+  "around": {
+    "title": "Discover Around Breeze Villa",
+    "beach": "Beach",
+    "restaurant": "Local Restaurant",
+    "sunset": "Sunset Spot",
+    "culture": "Temple & Market"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "name": "Name",
+    "email": "Email",
+    "arrival": "Arrival",
+    "departure": "Departure",
+    "message": "Message",
+    "submit": "Send Message"
+  }
+}

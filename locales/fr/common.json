@@ -1,0 +1,51 @@
+{
+  "header": {
+    "home": "Accueil",
+    "about": "À propos",
+    "suites": "Suites",
+    "gallery": "Galerie",
+    "around": "Alentours",
+    "contact": "Contact"
+  },
+  "footer": {
+    "address": "Breeze Villa, Île Paradisiaque, Côte Tropicale",
+    "phone": "+1 (555) 123-4567",
+    "email": "bonjour@breezevilla.com",
+    "copyright": "© 2024 Breeze Villa. Tous droits réservés."
+  },
+  "home": {
+    "heroTitle": "Bienvenue à Breeze Villa",
+    "heroSubtitle": "Votre évasion tropicale de luxe",
+    "heroCta": "Explorer la Villa",
+    "introTitle": "Découvrez le Paradis",
+    "introText": "Découvrez le mélange parfait entre luxe et nature à Breeze Villa.",
+    "bookCta": "Réserver Votre Séjour"
+  },
+  "about": {
+    "title": "À propos de Breeze Villa",
+    "philosophy": "Notre Philosophie",
+    "team": "L'Équipe"
+  },
+  "suites": {
+    "title": "Nos Suites"
+  },
+  "gallery": {
+    "title": "Galerie"
+  },
+  "around": {
+    "title": "Découvrir Autour de Breeze Villa",
+    "beach": "Plage",
+    "restaurant": "Restaurant Local",
+    "sunset": "Spot Coucher de Soleil",
+    "culture": "Temple & Marché"
+  },
+  "contact": {
+    "title": "Nous Contacter",
+    "name": "Nom",
+    "email": "Email",
+    "arrival": "Arrivée",
+    "departure": "Départ",
+    "message": "Message",
+    "submit": "Envoyer"
+  }
+}
