@@ -2,10 +2,11 @@
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +25,10 @@ export default function Header() {
     { href: '/contact', label: 'Contact' },
   ];
 
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -35,16 +40,26 @@ export default function Header() {
     >
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-display font-bold text-dark">
+          <Link
+            href="/"
+            className={`text-2xl font-display font-bold transition-colors duration-300 ${
+              scrolled ? 'text-dark' : 'text-background'
+            }`}
+          >
             Breeze Villa
           </Link>
 
+          {/* Desktop Navigation */}
           <ul className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-dark hover:text-gold transition-colors duration-300 font-body"
+                  className={`font-body transition-colors duration-300 ${
+                    scrolled
+                      ? 'text-dark hover:text-gold'
+                      : 'text-background hover:text-gold'
+                  }`}
                 >
                   {link.label}
                 </Link>
@@ -52,12 +67,52 @@ export default function Header() {
             ))}
           </ul>
 
-          <button className="md:hidden text-dark">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          {/* Mobile Menu Button */}
+          <button
+            className={`md:hidden transition-colors duration-300 ${
+              scrolled ? 'text-dark' : 'text-background'
+            }`}
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3 }}
+              className="md:hidden absolute top-full left-0 right-0 bg-background shadow-lg z-50"
+            >
+              <ul className="flex flex-col items-center py-6 space-y-4">
+                {navLinks.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      onClick={handleLinkClick}
+                      className="text-dark hover:text-gold transition-colors duration-300 font-body text-lg"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
     </motion.header>
   );
