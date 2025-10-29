@@ -10,8 +10,8 @@
     "contact": "Contact"
   },
   "footer": {
-    "tagline": "Your luxury tropical escape",
-    "address": "Breeze Villa, Sunset Beach Road, Bali 80361, Indonesia",
+    "contact": "Contact",
+    "address": "Sunset Beach Road, Bali 80361, Indonesia",
     "phone": "+62 361 847 5678",
     "email": "reservations@breezevilla.com",
     "copyright": "© 2024 Breeze Villa. All rights reserved.",
@@ -22,26 +22,28 @@
     "heroSubtitle": "Experience unparalleled luxury in our exclusive beachfront sanctuary",
     "heroCta": "Discover Our Suites",
     "introTitle": "Where Dreams Meet Reality",
-    "introText": "Nestled along Bali's pristine coastline, Breeze Villa offers an intimate luxury experience where contemporary elegance harmonizes with tropical beauty. Each moment here is crafted to perfection.",
+    "introSubtitle": "Nestled along Bali's pristine coastline, Breeze Villa offers an intimate luxury experience where contemporary elegance harmonizes with tropical beauty. Each moment here is crafted to perfection.",
     "suitesCard": {
       "title": "Luxurious Suites",
-      "description": "Immerse yourself in spacious accommodations featuring panoramic ocean views, private terraces, and world-class amenities designed for ultimate comfort."
+      "description": "Immerse yourself in spacious accommodations featuring panoramic ocean views, private terraces, and world-class amenities designed for ultimate comfort.",
+      "button": "View Suites"
     },
     "galleryCard": {
       "title": "Visual Journey",
-      "description": "Explore our stunning property through a curated collection of images showcasing the beauty and elegance that awaits you."
+      "description": "Explore our stunning property through a curated collection of images showcasing the beauty and elegance that awaits you.",
+      "button": "See Gallery"
     },
     "contactCard": {
       "title": "Plan Your Escape",
-      "description": "Our dedicated concierge team is ready to craft your perfect tropical getaway with personalized service and attention to detail."
+      "description": "Our dedicated concierge team is ready to craft your perfect tropical getaway with personalized service and attention to detail.",
+      "button": "Contact Us"
     },
     "testimonialTitle": "Guest Experiences",
     "testimonialQuote": "Breeze Villa redefined luxury for us. From the breathtaking architecture to the impeccable service, every detail exceeded our highest expectations. The sunset views from our suite were simply unforgettable.",
-    "testimonialAuthor": "Emma & Thomas Richardson",
-    "testimonialLocation": "London, United Kingdom",
+    "testimonialAuthor": "Emma & Thomas Richardson, London, United Kingdom",
     "ctaTitle": "Begin Your Journey",
     "ctaSubtitle": "Discover why Breeze Villa is Bali's most exclusive retreat",
-    "ctaCta": "Reserve Your Suite"
+    "ctaButton": "Reserve Your Suite"
   },
   "about": {
     "title": "Our Story",
@@ -143,20 +145,23 @@
     }
   },
   "contact": {
-    "title": "Get in Touch",
-    "subtitle": "Begin planning your unforgettable escape",
+    "heroTitle": "Get in Touch",
+    "heroSubtitle": "Begin planning your unforgettable escape",
     "formTitle": "Send Us a Message",
     "visitTitle": "Visit Us",
     "name": "Full Name",
     "email": "Email Address",
     "arrival": "Arrival Date",
     "departure": "Departure Date",
-    "message": "Tell us about your dream getaway",
-    "submit": "Send Inquiry",
+    "messageLabel": "Tell us about your dream getaway",
+    "messagePlaceholder": "Share your preferences, special occasions, or any questions you may have...",
+    "submitButton": "Send Inquiry",
+    "successMessage": "Thank you for your message! We will get back to you soon.",
     "addressLabel": "Address",
     "phoneLabel": "Phone",
     "emailLabel": "Email",
     "hoursLabel": "Reservations",
-    "hoursText": "Available 24/7"
+    "hours": "Available 24/7",
+    "mapPlaceholder": "Map embed placeholder"
   }
 }

@@ -96,8 +96,8 @@ export default function Gallery() {
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {/* Overlay with title - triggers on entire image hover */}
-                  <div className="absolute inset-0 bg-[rgba(230,221,198,0)] group-hover:bg-[rgba(230,221,198,0.45)] transition-all duration-300 flex items-center justify-center">
-                    <h3 className="text-2xl font-display font-semibold text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute inset-0 bg-[rgba(230,221,198,0)] group-hover:bg-[rgba(230,221,198,0.55)] backdrop-blur-0 group-hover:backdrop-blur-sm transition-all duration-300 ease-in-out flex items-center justify-center">
+                    <h3 className="text-2xl font-display font-semibold text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.35)' }}>
                       {image.title}
                     </h3>
                   </div>

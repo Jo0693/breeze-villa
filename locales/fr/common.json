@@ -10,8 +10,8 @@
     "contact": "Contact"
   },
   "footer": {
-    "tagline": "Votre évasion tropicale de luxe",
-    "address": "Breeze Villa, Sunset Beach Road, Bali 80361, Indonésie",
+    "contact": "Contact",
+    "address": "Sunset Beach Road, Bali 80361, Indonésie",
     "phone": "+62 361 847 5678",
     "email": "reservations@breezevilla.com",
     "copyright": "© 2024 Breeze Villa. Tous droits réservés.",
@@ -22,26 +22,28 @@
     "heroSubtitle": "Vivez un luxe inégalé dans notre sanctuaire exclusif en bord de mer",
     "heroCta": "Découvrir Nos Suites",
     "introTitle": "Où les Rêves Deviennent Réalité",
-    "introText": "Nichée le long du littoral immaculé de Bali, Breeze Villa offre une expérience de luxe intime où l'élégance contemporaine s'harmonise avec la beauté tropicale. Chaque instant ici est créé à la perfection.",
+    "introSubtitle": "Nichée le long du littoral immaculé de Bali, Breeze Villa offre une expérience de luxe intime où l'élégance contemporaine s'harmonise avec la beauté tropicale. Chaque instant ici est créé à la perfection.",
     "suitesCard": {
       "title": "Suites Luxueuses",
-      "description": "Plongez dans des hébergements spacieux offrant des vues panoramiques sur l'océan, des terrasses privées et des équipements de classe mondiale conçus pour un confort ultime."
+      "description": "Plongez dans des hébergements spacieux offrant des vues panoramiques sur l'océan, des terrasses privées et des équipements de classe mondiale conçus pour un confort ultime.",
+      "button": "Voir les Suites"
     },
     "galleryCard": {
       "title": "Voyage Visuel",
-      "description": "Explorez notre magnifique propriété à travers une collection d'images soigneusement sélectionnées présentant la beauté et l'élégance qui vous attendent."
+      "description": "Explorez notre magnifique propriété à travers une collection d'images soigneusement sélectionnées présentant la beauté et l'élégance qui vous attendent.",
+      "button": "Voir la Galerie"
     },
     "contactCard": {
       "title": "Planifiez Votre Évasion",
-      "description": "Notre équipe de conciergerie dévouée est prête à créer votre escapade tropicale parfaite avec un service personnalisé et une attention aux détails."
+      "description": "Notre équipe de conciergerie dévouée est prête à créer votre escapade tropicale parfaite avec un service personnalisé et une attention aux détails.",
+      "button": "Nous Contacter"
     },
     "testimonialTitle": "Expériences de Nos Hôtes",
     "testimonialQuote": "Breeze Villa a redéfini le luxe pour nous. De l'architecture à couper le souffle au service impeccable, chaque détail a dépassé nos plus hautes attentes. Les vues sur le coucher de soleil depuis notre suite étaient tout simplement inoubliables.",
-    "testimonialAuthor": "Emma & Thomas Richardson",
-    "testimonialLocation": "Londres, Royaume-Uni",
+    "testimonialAuthor": "Emma & Thomas Richardson, Londres, Royaume-Uni",
     "ctaTitle": "Commencez Votre Voyage",
     "ctaSubtitle": "Découvrez pourquoi Breeze Villa est le refuge le plus exclusif de Bali",
-    "ctaCta": "Réserver Votre Suite"
+    "ctaButton": "Réserver Votre Suite"
   },
   "about": {
     "title": "Notre Histoire",
@@ -143,20 +145,23 @@
     }
   },
   "contact": {
-    "title": "Contactez-Nous",
-    "subtitle": "Commencez à planifier votre évasion inoubliable",
+    "heroTitle": "Contactez-Nous",
+    "heroSubtitle": "Commencez à planifier votre évasion inoubliable",
     "formTitle": "Envoyez-Nous un Message",
     "visitTitle": "Visitez-Nous",
     "name": "Nom Complet",
     "email": "Adresse Email",
     "arrival": "Date d'Arrivée",
     "departure": "Date de Départ",
-    "message": "Parlez-nous de votre escapade de rêve",
-    "submit": "Envoyer la Demande",
+    "messageLabel": "Parlez-nous de votre escapade de rêve",
+    "messagePlaceholder": "Partagez vos préférences, occasions spéciales ou toute question que vous pourriez avoir...",
+    "submitButton": "Envoyer la Demande",
+    "successMessage": "Merci pour votre message ! Nous vous répondrons bientôt.",
     "addressLabel": "Adresse",
     "phoneLabel": "Téléphone",
     "emailLabel": "Email",
     "hoursLabel": "Réservations",
-    "hoursText": "Disponible 24h/24 et 7j/7"
+    "hours": "Disponible 24h/24 et 7j/7",
+    "mapPlaceholder": "Espace pour carte interactive"
   }
 }
