@@ -7,11 +7,19 @@ import SectionTitle from '@/components/SectionTitle';
 import Image from 'next/image';
 import { Award, Heart, Zap } from 'react-feather';
 import { useTranslation } from 'react-i18next';
+import SEOHead from '@/components/SEOHead';
+import { getStructuredData } from '@/lib/metadata';
 
 export default function About() {
   const { t } = useTranslation();
   return (
     <>
+      <SEOHead
+        title="Our Story – Balinese Serenity & Modern Comfort | Breeze Villa"
+        description="The vision and philosophy behind Breeze Villa – sustainable luxury, authentic hospitality, and personalized service in Bali."
+        canonical="https://breeze-villa.vercel.app/about"
+        jsonLd={getStructuredData('about')}
+      />
       <Header />
       <main>
         <Hero

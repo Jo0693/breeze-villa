@@ -9,6 +9,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
+import SEOHead from '@/components/SEOHead';
 
 export default function Gallery() {
   const { t } = useTranslation();
@@ -85,6 +86,11 @@ export default function Gallery() {
 
   return (
     <>
+      <SEOHead
+        title="Gallery – Visual Journey Through Breeze Villa | Bali"
+        description="Explore our suites, infinity pools, and breathtaking sunset views of Bali through our curated photo gallery."
+        canonical="https://breeze-villa.vercel.app/gallery"
+      />
       <Header />
       <main>
         <Hero

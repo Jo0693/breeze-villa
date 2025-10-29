@@ -6,6 +6,8 @@ import Hero from '@/components/Hero';
 import SectionTitle from '@/components/SectionTitle';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import SEOHead from '@/components/SEOHead';
+import { getStructuredData } from '@/lib/metadata';
 
 export default function Contact() {
   const { t } = useTranslation();
@@ -32,6 +34,12 @@ export default function Contact() {
 
   return (
     <>
+      <SEOHead
+        title="Contact – Book Your Stay at Breeze Villa | Bali"
+        description="Send us a message to plan your stay at Breeze Villa. We reply within 24 hours. Phone: +62 361 847 5678"
+        canonical="https://breeze-villa.vercel.app/contact"
+        jsonLd={getStructuredData('contact')}
+      />
       <Header />
       <main>
         <Hero

@@ -7,6 +7,7 @@ import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
 import { Anchor, Sun, MapPin, Activity, Coffee, TrendingUp } from 'react-feather';
 import { useTranslation } from 'react-i18next';
+import SEOHead from '@/components/SEOHead';
 
 export default function Around() {
   const { t } = useTranslation();
@@ -40,6 +41,11 @@ export default function Around() {
 
   return (
     <>
+      <SEOHead
+        title="Around – Beaches, Temples & Experiences Nearby | Breeze Villa"
+        description="Hand-picked local attractions and hidden gems near Breeze Villa: Sunset Beach, Tanah Lot Temple, diving, and cultural experiences."
+        canonical="https://breeze-villa.vercel.app/around"
+      />
       <Header />
       <main>
         <Hero

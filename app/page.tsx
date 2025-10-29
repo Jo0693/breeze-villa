@@ -6,12 +6,20 @@ import Hero from '@/components/Hero';
 import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
 import { useTranslation } from 'react-i18next';
+import SEOHead from '@/components/SEOHead';
+import { getStructuredData } from '@/lib/metadata';
 
 export default function Home() {
   const { t } = useTranslation();
 
   return (
     <>
+      <SEOHead
+        title="Breeze Villa – Luxury Ocean View Villa in Bali"
+        description="Exclusive ocean-view villa in Uluwatu, Bali. Premium suites, private pools, and bespoke experiences in a tropical paradise."
+        canonical="https://breeze-villa.vercel.app/"
+        jsonLd={getStructuredData('home')}
+      />
       <Header />
       <main>
         <Hero

@@ -7,6 +7,7 @@ import SectionTitle from '@/components/SectionTitle';
 import Card from '@/components/Card';
 import { Home, Wifi, Tv, Coffee, Wind, Droplet, Smartphone, Star } from 'react-feather';
 import { useTranslation } from 'react-i18next';
+import SEOHead from '@/components/SEOHead';
 
 export default function Suites() {
   const { t } = useTranslation();
@@ -40,6 +41,11 @@ export default function Suites() {
 
   return (
     <>
+      <SEOHead
+        title="Suites – Ocean Views, Private Pools, Premium Amenities | Breeze Villa"
+        description="Discover Ocean Horizon Suite, Garden Oasis Villa, Sunset Pavilion, and Presidential Sanctuary. Luxury accommodations from $450/night."
+        canonical="https://breeze-villa.vercel.app/suites"
+      />
       <Header />
       <main>
         <Hero

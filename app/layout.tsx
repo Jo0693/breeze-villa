@@ -44,57 +44,27 @@ export const metadata: Metadata = {
   },
 };
 
+function RootLayoutContent({ children }: { children: React.ReactNode }) {
+  return (
+    <LanguageProvider>
+      {children}
+      <FloatingCTA />
+    </LanguageProvider>
+  );
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Hotel",
-              "name": "Breeze Villa",
-              "description": "Luxury ocean-view villa in Uluwatu, Bali offering premium suites, exceptional service, and authentic Balinese hospitality.",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Sunset Beach Road",
-                "addressLocality": "Bali",
-                "postalCode": "80361",
-                "addressCountry": "ID"
-              },
-              "telephone": "+62 361 847 5678",
-              "email": "reservations@breezevilla.com",
-              "priceRange": "$$-$$$",
-              "image": "https://images.unsplash.com/photo-1540541338287-41700207dee6?q=80&w=2940",
-              "url": "https://breeze-villa.vercel.app",
-              "starRating": {
-                "@type": "Rating",
-                "ratingValue": "5"
-              },
-              "amenityFeature": [
-                { "@type": "LocationFeatureSpecification", "name": "Ocean View" },
-                { "@type": "LocationFeatureSpecification", "name": "Private Pool" },
-                { "@type": "LocationFeatureSpecification", "name": "Free WiFi" },
-                { "@type": "LocationFeatureSpecification", "name": "Air Conditioning" },
-                { "@type": "LocationFeatureSpecification", "name": "Spa" },
-                { "@type": "LocationFeatureSpecification", "name": "Restaurant" }
-              ]
-            })
-          }}
-        />
-      </head>
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${playfair.variable} ${inter.variable} antialiased`}
+        suppressHydrationWarning
       >
-        <LanguageProvider>
-          {children}
-          <FloatingCTA />
-        </LanguageProvider>
+        <RootLayoutContent>{children}</RootLayoutContent>
       </body>
     </html>
   );

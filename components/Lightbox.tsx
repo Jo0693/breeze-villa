@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight } from 'react-feather';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface LightboxProps {
   images: { url: string; title: string }[];
@@ -22,6 +22,9 @@ export default function Lightbox({
   onNext,
   onPrevious,
 }: LightboxProps) {
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
   // Handle keyboard navigation
   useEffect(() => {
     if (!isOpen) return;
@@ -47,6 +50,32 @@ export default function Lightbox({
       document.body.style.overflow = '';
     };
   }, [isOpen]);
+
+  // Handle touch swipe
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    setTouchEnd(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > 50;
+    const isRightSwipe = distance < -50;
+
+    if (isLeftSwipe) {
+      onNext();
+    } else if (isRightSwipe) {
+      onPrevious();
+    }
+
+    setTouchStart(0);
+    setTouchEnd(0);
+  };
 
   const currentImage = images[currentIndex];
 
@@ -111,6 +140,9 @@ export default function Lightbox({
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-12"
             onClick={onClose}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           >
             <div
               className="relative w-full h-full max-w-7xl max-h-[90vh]"
