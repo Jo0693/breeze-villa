@@ -42,7 +42,7 @@ export default function Header() {
         scrolled ? 'bg-background shadow-lg' : 'bg-transparent'
       }`}
     >
-      <nav className="container mx-auto px-6 py-4">
+      <nav className="container mx-auto px-6 py-4" aria-label="Main navigation">
         <div className="flex items-center justify-between">
           <Link
             href="/"
@@ -76,6 +76,7 @@ export default function Header() {
             <div className="flex items-center space-x-2 border-l border-gray-400 pl-6">
               <button
                 onClick={() => setLanguage('en')}
+                aria-label="Switch to English"
                 className={`font-body text-sm transition-colors duration-300 ${
                   language === 'en'
                     ? 'text-gold font-semibold'
@@ -89,6 +90,7 @@ export default function Header() {
               <span className={scrolled ? 'text-dark/40' : 'text-background/40'}>|</span>
               <button
                 onClick={() => setLanguage('fr')}
+                aria-label="Switch to French"
                 className={`font-body text-sm transition-colors duration-300 ${
                   language === 'fr'
                     ? 'text-gold font-semibold'
@@ -150,6 +152,7 @@ export default function Header() {
                   <div className="flex items-center space-x-3">
                     <button
                       onClick={() => setLanguage('en')}
+                      aria-label="Switch to English"
                       className={`font-body text-sm transition-colors duration-300 ${
                         language === 'en'
                           ? 'text-gold font-semibold'
@@ -161,6 +164,7 @@ export default function Header() {
                     <span className="text-dark/40">|</span>
                     <button
                       onClick={() => setLanguage('fr')}
+                      aria-label="Switch to French"
                       className={`font-body text-sm transition-colors duration-300 ${
                         language === 'fr'
                           ? 'text-gold font-semibold'

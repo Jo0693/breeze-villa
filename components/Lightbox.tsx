@@ -92,14 +92,18 @@ export default function Lightbox({
             className="fixed inset-0 bg-black/90 z-50 backdrop-blur-sm"
           />
 
-          {/* Close Button */}
+          {/* Close Button - Fixed above all overlays for mobile */}
           <motion.button
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed top-6 right-6 z-50 text-gold hover:text-gold/80 transition-colors duration-300 bg-black/30 rounded-full p-3 hover:bg-black/50"
-            aria-label="Close lightbox"
+            onTouchEnd={(e) => {
+              e.preventDefault();
+              onClose();
+            }}
+            className="fixed top-4 right-4 z-[9999] text-gold hover:text-white bg-black/40 rounded-full p-2 transition-colors duration-300"
+            aria-label="Close gallery image"
           >
             <X size={32} />
           </motion.button>
@@ -111,7 +115,7 @@ export default function Lightbox({
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0 }}
               onClick={onPrevious}
-              className="fixed left-6 top-1/2 transform -translate-y-1/2 z-50 text-gold hover:text-gold/80 transition-colors duration-300 bg-black/30 rounded-full p-3 hover:bg-black/50"
+              className="fixed left-6 top-1/2 transform -translate-y-1/2 z-[9998] text-gold hover:text-white transition-colors duration-300 bg-black/40 rounded-full p-3 hover:bg-black/60"
               aria-label="Previous image"
             >
               <ChevronLeft size={32} />
@@ -125,7 +129,7 @@ export default function Lightbox({
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0 }}
               onClick={onNext}
-              className="fixed right-6 top-1/2 transform -translate-y-1/2 z-50 text-gold hover:text-gold/80 transition-colors duration-300 bg-black/30 rounded-full p-3 hover:bg-black/50"
+              className="fixed right-6 top-1/2 transform -translate-y-1/2 z-[9998] text-gold hover:text-white transition-colors duration-300 bg-black/40 rounded-full p-3 hover:bg-black/60"
               aria-label="Next image"
             >
               <ChevronRight size={32} />

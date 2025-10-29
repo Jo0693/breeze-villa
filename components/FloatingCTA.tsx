@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { X } from 'react-feather';
 import { useTranslation } from 'react-i18next';
 
@@ -13,6 +13,18 @@ export default function FloatingCTA() {
     message: '',
   });
   const { t } = useTranslation();
+
+  // Handle ESC key to close modal
+  useEffect(() => {
+    if (!isModalOpen) return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setIsModalOpen(false);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isModalOpen]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,7 +67,7 @@ export default function FloatingCTA() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsModalOpen(false)}
-            className="fixed inset-0 bg-black/80 z-50 backdrop-blur-sm flex items-center justify-center p-4"
+            className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4"
           >
             {/* Modal Content */}
             <motion.div
@@ -64,7 +76,7 @@ export default function FloatingCTA() {
               exit={{ scale: 0.95, opacity: 0 }}
               transition={{ duration: 0.3 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-background rounded-xl shadow-2xl p-8 w-full max-w-md max-h-[90vh] overflow-y-auto relative"
+              className="bg-white rounded-xl shadow-xl p-6 w-[90%] max-w-md max-h-[90vh] overflow-y-auto relative"
             >
               {/* Close Button */}
               <button
