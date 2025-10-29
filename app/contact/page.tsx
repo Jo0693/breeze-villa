@@ -5,8 +5,10 @@ import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import SectionTitle from '@/components/SectionTitle';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,7 +20,7 @@ export default function Contact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    alert('Thank you for your message! We will get back to you soon.');
+    alert(t('contact.successMessage'));
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -33,8 +35,8 @@ export default function Contact() {
       <Header />
       <main>
         <Hero
-          title="Get in Touch"
-          subtitle="Begin planning your unforgettable escape"
+          title={t('contact.heroTitle')}
+          subtitle={t('contact.heroSubtitle')}
           height="h-[60vh]"
           backgroundImage="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=2940"
         />
@@ -43,12 +45,12 @@ export default function Contact() {
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div>
-                <SectionTitle title="Send Us a Message" centered={false} />
+                <SectionTitle title={t('contact.formTitle')} centered={false} />
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-dark font-body font-semibold mb-2">
-                      Full Name
+                      {t('contact.name')}
                     </label>
                     <input
                       type="text"
@@ -64,7 +66,7 @@ export default function Contact() {
 
                   <div>
                     <label htmlFor="email" className="block text-dark font-body font-semibold mb-2">
-                      Email Address
+                      {t('contact.email')}
                     </label>
                     <input
                       type="email"
@@ -81,7 +83,7 @@ export default function Contact() {
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="arrival" className="block text-dark font-body font-semibold mb-2">
-                        Arrival Date
+                        {t('contact.arrival')}
                       </label>
                       <input
                         type="date"
@@ -96,7 +98,7 @@ export default function Contact() {
 
                     <div>
                       <label htmlFor="departure" className="block text-dark font-body font-semibold mb-2">
-                        Departure Date
+                        {t('contact.departure')}
                       </label>
                       <input
                         type="date"
@@ -112,7 +114,7 @@ export default function Contact() {
 
                   <div>
                     <label htmlFor="message" className="block text-dark font-body font-semibold mb-2">
-                      Tell us about your dream getaway
+                      {t('contact.messageLabel')}
                     </label>
                     <textarea
                       id="message"
@@ -121,7 +123,7 @@ export default function Contact() {
                       onChange={handleChange}
                       rows={6}
                       required
-                      placeholder="Share your preferences, special occasions, or any questions you may have..."
+                      placeholder={t('contact.messagePlaceholder')}
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-gold focus:border-gold resize-none transition-all duration-300"
                       style={{ borderRadius: '6px' }}
                     />
@@ -131,42 +133,41 @@ export default function Contact() {
                     type="submit"
                     className="w-full bg-gold hover:bg-gold/90 text-white font-body font-semibold px-8 py-4 rounded-md transition-all duration-300 transform hover:scale-105"
                   >
-                    Send Inquiry
+                    {t('contact.submitButton')}
                   </button>
                 </form>
               </div>
 
               <div>
-                <SectionTitle title="Visit Us" centered={false} />
+                <SectionTitle title={t('contact.visitTitle')} centered={false} />
 
                 <div className="space-y-6">
                   <div>
-                    <h4 className="font-display font-semibold text-dark text-lg mb-2">Address</h4>
+                    <h4 className="font-display font-semibold text-dark text-lg mb-2">{t('contact.addressLabel')}</h4>
                     <p className="text-dark/70 font-body">
-                      Breeze Villa<br />
-                      Sunset Beach Road<br />
-                      Bali 80361, Indonesia
+                      {t('siteName')}<br />
+                      {t('footer.address')}
                     </p>
                   </div>
 
                   <div>
-                    <h4 className="font-display font-semibold text-dark text-lg mb-2">Phone</h4>
-                    <p className="text-dark/70 font-body">+62 361 847 5678</p>
+                    <h4 className="font-display font-semibold text-dark text-lg mb-2">{t('contact.phoneLabel')}</h4>
+                    <p className="text-dark/70 font-body">{t('footer.phone')}</p>
                   </div>
 
                   <div>
-                    <h4 className="font-display font-semibold text-dark text-lg mb-2">Email</h4>
-                    <p className="text-dark/70 font-body">reservations@breezevilla.com</p>
+                    <h4 className="font-display font-semibold text-dark text-lg mb-2">{t('contact.emailLabel')}</h4>
+                    <p className="text-dark/70 font-body">{t('footer.email')}</p>
                   </div>
 
                   <div>
-                    <h4 className="font-display font-semibold text-dark text-lg mb-2">Reservations</h4>
-                    <p className="text-dark/70 font-body">Available 24/7</p>
+                    <h4 className="font-display font-semibold text-dark text-lg mb-2">{t('contact.hoursLabel')}</h4>
+                    <p className="text-dark/70 font-body">{t('contact.hours')}</p>
                   </div>
 
                   <div className="mt-8">
                     <div className="w-full h-80 bg-accent rounded-lg flex items-center justify-center">
-                      <p className="text-dark/50 font-body">Map embed placeholder</p>
+                      <p className="text-dark/50 font-body">{t('contact.mapPlaceholder')}</p>
                     </div>
                   </div>
                 </div>

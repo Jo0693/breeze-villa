@@ -1,50 +1,38 @@
 'use client';
 
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
+import '../i18n';
 
 type Language = 'en' | 'fr';
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: any;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>('en');
-  const [translations, setTranslations] = useState<any>({});
+  const { i18n } = useTranslation();
 
   useEffect(() => {
-    // Load language from localStorage
+    // Load language from localStorage on mount
     const savedLanguage = localStorage.getItem('language') as Language;
     if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'fr')) {
-      setLanguageState(savedLanguage);
+      i18n.changeLanguage(savedLanguage);
     }
-  }, []);
-
-  useEffect(() => {
-    // Load translations when language changes
-    const loadTranslations = async () => {
-      try {
-        const response = await fetch(`/locales/${language}/common.json`);
-        const data = await response.json();
-        setTranslations(data);
-      } catch (error) {
-        console.error('Failed to load translations:', error);
-      }
-    };
-    loadTranslations();
-  }, [language]);
+  }, [i18n]);
 
   const setLanguage = (lang: Language) => {
-    setLanguageState(lang);
+    i18n.changeLanguage(lang);
     localStorage.setItem('language', lang);
   };
 
+  const currentLanguage = (i18n.language || 'en') as Language;
+
   return (
-    <LanguageContext.Provider value={{ language, setLanguage, t: translations }}>
+    <LanguageContext.Provider value={{ language: currentLanguage, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   );

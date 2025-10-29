@@ -1,24 +1,28 @@
 'use client';
 
+import { useTranslation } from 'react-i18next';
+
 export default function Footer() {
+  const { t } = useTranslation();
+
   return (
     <footer className="bg-dark text-white py-12">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
-            <h3 className="text-2xl font-display font-bold mb-4 text-gold">Breeze Villa</h3>
-            <p className="text-gray-300 font-body">Your luxury tropical escape</p>
+            <h3 className="text-2xl font-display font-bold mb-4 text-gold">{t('siteName')}</h3>
+            <p className="text-gray-300 font-body">{t('tagline')}</p>
           </div>
 
           <div>
-            <h4 className="text-lg font-display font-semibold mb-4">Contact</h4>
-            <p className="text-gray-300 font-body mb-2">Sunset Beach Road, Bali 80361</p>
-            <p className="text-gray-300 font-body mb-2">+62 361 847 5678</p>
-            <p className="text-gray-300 font-body">reservations@breezevilla.com</p>
+            <h4 className="text-lg font-display font-semibold mb-4">{t('footer.contact')}</h4>
+            <p className="text-gray-300 font-body mb-2">{t('footer.address')}</p>
+            <p className="text-gray-300 font-body mb-2">{t('footer.phone')}</p>
+            <p className="text-gray-300 font-body">{t('footer.email')}</p>
           </div>
 
           <div>
-            <h4 className="text-lg font-display font-semibold mb-4">Follow Us</h4>
+            <h4 className="text-lg font-display font-semibold mb-4">{t('footer.followUs')}</h4>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-300 hover:text-gold transition-colors duration-300">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -36,7 +40,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p className="text-gray-400 font-body text-sm">
-            © 2024 Breeze Villa. All rights reserved.
+            {t('footer.copyright')}
           </p>
         </div>
       </div>

@@ -4,11 +4,13 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,12 +21,12 @@ export default function Header() {
   }, []);
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/suites', label: 'Suites' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/around', label: 'Around' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/', label: t('header.home') },
+    { href: '/about', label: t('header.about') },
+    { href: '/suites', label: t('header.suites') },
+    { href: '/gallery', label: t('header.gallery') },
+    { href: '/around', label: t('header.around') },
+    { href: '/contact', label: t('header.contact') },
   ];
 
   const handleLinkClick = () => {
@@ -48,7 +50,7 @@ export default function Header() {
               scrolled ? 'text-dark' : 'text-background'
             }`}
           >
-            Breeze Villa
+            {t('siteName')}
           </Link>
 
           {/* Desktop Navigation */}

@@ -6,8 +6,11 @@ import Hero from '@/components/Hero';
 import SectionTitle from '@/components/SectionTitle';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function Gallery() {
+  const { t } = useTranslation();
+
   const images = [
     {
       url: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2940',
@@ -64,8 +67,8 @@ export default function Gallery() {
       <Header />
       <main>
         <Hero
-          title="Visual Journey"
-          subtitle="Discover the beauty and elegance that defines Breeze Villa"
+          title={t('gallery.title')}
+          subtitle={t('gallery.subtitle')}
           height="h-[60vh]"
           backgroundImage="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=2940"
         />
@@ -73,8 +76,8 @@ export default function Gallery() {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <SectionTitle
-              title="Explore Our Villa"
-              subtitle="A curated collection showcasing the extraordinary beauty of our property"
+              title={t('around.title')}
+              subtitle={t('gallery.subtitle')}
             />
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
@@ -90,18 +93,13 @@ export default function Gallery() {
                     src={image.url}
                     alt={image.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  {/* Overlay with title */}
-                  <div className="absolute inset-0 bg-[rgba(230,221,198,0)] group-hover:bg-[rgba(230,221,198,0.3)] transition-all duration-300 flex items-center justify-center">
-                    <motion.h3
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      whileHover={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.3 }}
-                      className="text-2xl font-display font-semibold text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                    >
+                  {/* Overlay with title - triggers on entire image hover */}
+                  <div className="absolute inset-0 bg-[rgba(230,221,198,0)] group-hover:bg-[rgba(230,221,198,0.45)] transition-all duration-300 flex items-center justify-center">
+                    <h3 className="text-2xl font-display font-semibold text-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       {image.title}
-                    </motion.h3>
+                    </h3>
                   </div>
                 </motion.div>
               ))}
@@ -109,7 +107,7 @@ export default function Gallery() {
 
             <div className="text-center mt-12">
               <p className="text-dark/70 font-body mb-6">
-                Lightbox functionality coming soon
+                {t('gallery.lightboxNote')}
               </p>
             </div>
           </div>

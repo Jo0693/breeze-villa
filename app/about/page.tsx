@@ -6,15 +6,17 @@ import Hero from '@/components/Hero';
 import SectionTitle from '@/components/SectionTitle';
 import Image from 'next/image';
 import { Award, Heart, Zap } from 'react-feather';
+import { useTranslation } from 'react-i18next';
 
 export default function About() {
+  const { t } = useTranslation();
   return (
     <>
       <Header />
       <main>
         <Hero
-          title="Our Story"
-          subtitle="A sanctuary born from passion and purpose"
+          title={t('about.title')}
+          subtitle={t('about.subtitle')}
           height="h-[60vh]"
           backgroundImage="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2940"
         />
@@ -23,12 +25,12 @@ export default function About() {
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
-                <SectionTitle title="The Vision Behind Breeze Villa" centered={false} />
+                <SectionTitle title={t('about.storyTitle')} centered={false} />
                 <p className="text-lg text-dark/80 font-body mb-6">
-                  Breeze Villa emerged from a dream to create an extraordinary sanctuary where architectural brilliance meets natural splendor. Founded in 2019, our boutique property represents the culmination of meticulous design, sustainable luxury, and a deep respect for Balinese culture.
+                  {t('about.storyParagraph1')}
                 </p>
                 <p className="text-lg text-dark/80 font-body">
-                  Every element of Breeze Villa has been thoughtfully curated to offer discerning travelers an intimate escape. From locally-sourced teak wood to handcrafted Balinese furnishings, we blend contemporary sophistication with authentic island heritage to create an experience that transcends ordinary hospitality.
+                  {t('about.storyParagraph2')}
                 </p>
               </div>
               <div className="relative h-96">
@@ -46,35 +48,35 @@ export default function About() {
         <section className="py-20 bg-accent">
           <div className="container mx-auto px-6">
             <SectionTitle
-              title="Our Philosophy"
-              subtitle="Three pillars that define our commitment to excellence"
+              title={t('about.philosophyTitle')}
+              subtitle={t('about.philosophySubtitle')}
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
                 <div className="flex justify-center mb-4">
                   <Zap className="text-gold" size={48} />
                 </div>
-                <h3 className="text-xl font-display font-bold text-dark mb-3">Sustainable Luxury</h3>
+                <h3 className="text-xl font-display font-bold text-dark mb-3">{t('about.philosophy1Title')}</h3>
                 <p className="text-dark/70 font-body">
-                  We believe true luxury respects the environment. Our eco-conscious practices, from solar energy to organic gardens, ensure your stay leaves minimal impact while maximizing comfort.
+                  {t('about.philosophy1Text')}
                 </p>
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-4">
                   <Award className="text-gold" size={48} />
                 </div>
-                <h3 className="text-xl font-display font-bold text-dark mb-3">Authentic Experiences</h3>
+                <h3 className="text-xl font-display font-bold text-dark mb-3">{t('about.philosophy2Title')}</h3>
                 <p className="text-dark/70 font-body">
-                  Beyond accommodation, we curate meaningful connections with Balinese culture, local artisans, and natural wonders, creating memories that last a lifetime.
+                  {t('about.philosophy2Text')}
                 </p>
               </div>
               <div className="text-center">
                 <div className="flex justify-center mb-4">
                   <Heart className="text-gold" size={48} />
                 </div>
-                <h3 className="text-xl font-display font-bold text-dark mb-3">Personalized Service</h3>
+                <h3 className="text-xl font-display font-bold text-dark mb-3">{t('about.philosophy3Title')}</h3>
                 <p className="text-dark/70 font-body">
-                  Your desires shape your experience. Our dedicated staff anticipates your needs, offering bespoke services that transform your stay into something truly extraordinary.
+                  {t('about.philosophy3Text')}
                 </p>
               </div>
             </div>
@@ -84,12 +86,12 @@ export default function About() {
         <section className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <SectionTitle
-              title="The Team"
-              subtitle="Passionate professionals dedicated to your perfect escape"
+              title={t('about.teamTitle')}
+              subtitle={t('about.teamSubtitle')}
             />
             <div className="text-center max-w-3xl mx-auto">
               <p className="text-lg text-dark/80 font-body">
-                Our international team brings together hospitality veterans, local cultural experts, and wellness specialists. United by a passion for excellence, they ensure every guest receives personalized care that exceeds expectations. From our award-winning chef to our certified wellness practitioners, each member contributes to the magic of Breeze Villa.
+                {t('about.teamText')}
               </p>
             </div>
           </div>
