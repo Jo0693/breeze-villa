@@ -42,6 +42,8 @@ export default function Card({
           alt={title}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-500"
+          loading="lazy"
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
       </div>
 
@@ -56,7 +58,8 @@ export default function Card({
         {link && (
           <Link
             href={link}
-            className="inline-block bg-gold hover:bg-gold/90 text-white font-body font-semibold px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-105"
+            className="inline-block bg-gold hover:bg-gold/90 hover:shadow-lg hover:shadow-gold/30 text-white font-body font-semibold px-6 py-3 rounded-md transition-all duration-300 transform hover:scale-105"
+            aria-label={`${buttonText} - ${title}`}
           >
             {buttonText}
           </Link>

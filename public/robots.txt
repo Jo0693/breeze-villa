@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://breeze-villa.vercel.app
+
+# Sitemaps
+Sitemap: https://breeze-villa.vercel.app/sitemap.xml

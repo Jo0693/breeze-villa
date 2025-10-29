@@ -4,12 +4,16 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import SectionTitle from '@/components/SectionTitle';
+import Lightbox from '@/components/Lightbox';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
+import { useState } from 'react';
 
 export default function Gallery() {
   const { t } = useTranslation();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const images = [
     {
@@ -62,6 +66,23 @@ export default function Gallery() {
     },
   ];
 
+  const openLightbox = (index: number) => {
+    setCurrentImageIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const nextImage = () => {
+    setCurrentImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const previousImage = () => {
+    setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
   return (
     <>
       <Header />
@@ -87,6 +108,7 @@ export default function Gallery() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
+                  onClick={() => openLightbox(index)}
                   className="relative h-80 overflow-hidden rounded-lg shadow-lg group cursor-pointer"
                 >
                   <Image
@@ -94,6 +116,7 @@ export default function Gallery() {
                     alt={image.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                   />
                   {/* Overlay with title - triggers on entire image hover */}
                   <div className="absolute inset-0 bg-[rgba(230,221,198,0)] group-hover:bg-[rgba(230,221,198,0.55)] backdrop-blur-0 group-hover:backdrop-blur-sm transition-all duration-300 ease-in-out flex items-center justify-center">
@@ -114,6 +137,16 @@ export default function Gallery() {
         </section>
       </main>
       <Footer />
+
+      {/* Lightbox */}
+      <Lightbox
+        images={images}
+        currentIndex={currentImageIndex}
+        isOpen={lightboxOpen}
+        onClose={closeLightbox}
+        onNext={nextImage}
+        onPrevious={previousImage}
+      />
     </>
   );
 }

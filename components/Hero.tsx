@@ -1,7 +1,8 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
+import { useRef } from 'react';
 
 interface HeroProps {
   title: string;
@@ -20,13 +21,22 @@ export default function Hero({
   backgroundImage = 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2940',
   height = 'h-screen',
 }: HeroProps) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start start', 'end start'],
+  });
+
+  const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
+
   return (
-    <div className={`relative ${height} overflow-hidden`}>
+    <div ref={ref} className={`relative ${height} overflow-hidden`}>
       <motion.div
+        style={{ y }}
         initial={{ scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 10, ease: 'easeOut' }}
-        className="absolute inset-0"
+        className="absolute inset-0 will-change-transform"
       >
         <div
           className="w-full h-full bg-cover bg-center"
@@ -67,7 +77,8 @@ export default function Hero({
             >
               <Link
                 href={ctaLink}
-                className="inline-block bg-gold hover:bg-gold/90 text-white font-body font-semibold px-8 py-4 rounded-md transition-all duration-300 transform hover:scale-105"
+                className="inline-block bg-gold hover:bg-gold/90 hover:shadow-lg hover:shadow-gold/50 text-white font-body font-semibold px-8 py-4 rounded-md transition-all duration-300 transform hover:scale-105"
+                aria-label={ctaText}
               >
                 {ctaText}
               </Link>
