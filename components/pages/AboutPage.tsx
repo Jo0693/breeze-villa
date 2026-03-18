@@ -10,7 +10,7 @@ import { useTranslation } from 'react-i18next';
 import SEOHead from '@/components/SEOHead';
 import { getStructuredData } from '@/lib/metadata';
 
-export default function About() {
+export default function AboutPage() {
   const { t } = useTranslation();
   return (
     <>
@@ -29,15 +29,15 @@ export default function About() {
           backgroundImage="https://images.unsplash.com/photo-1571896349842-33c89424de2d?q=80&w=2940"
         />
 
-        <section className="py-20 bg-background">
+        <section data-publisher-section="story" className="py-20 bg-background">
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div>
                 <SectionTitle title={t('about.storyTitle')} centered={false} />
-                <p className="text-lg text-dark/80 font-body mb-6">
+                <p data-publisher-field="about.storyParagraph1" className="text-lg text-dark/80 font-body mb-6">
                   {t('about.storyParagraph1')}
                 </p>
-                <p className="text-lg text-dark/80 font-body">
+                <p data-publisher-field="about.storyParagraph2" className="text-lg text-dark/80 font-body">
                   {t('about.storyParagraph2')}
                 </p>
               </div>
@@ -53,7 +53,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className="py-20 bg-accent">
+        <section data-publisher-section="philosophy" className="py-20 bg-accent">
           <div className="container mx-auto px-6">
             <SectionTitle
               title={t('about.philosophyTitle')}
@@ -61,46 +61,29 @@ export default function About() {
             />
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
               <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <Zap className="text-gold" size={48} />
-                </div>
-                <h3 className="text-xl font-display font-bold text-dark mb-3">{t('about.philosophy1Title')}</h3>
-                <p className="text-dark/70 font-body">
-                  {t('about.philosophy1Text')}
-                </p>
+                <div className="flex justify-center mb-4"><Zap className="text-gold" size={48} /></div>
+                <h3 data-publisher-field="about.philosophy1Title" className="text-xl font-display font-bold text-dark mb-3">{t('about.philosophy1Title')}</h3>
+                <p data-publisher-field="about.philosophy1Text" className="text-dark/70 font-body">{t('about.philosophy1Text')}</p>
               </div>
               <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <Award className="text-gold" size={48} />
-                </div>
-                <h3 className="text-xl font-display font-bold text-dark mb-3">{t('about.philosophy2Title')}</h3>
-                <p className="text-dark/70 font-body">
-                  {t('about.philosophy2Text')}
-                </p>
+                <div className="flex justify-center mb-4"><Award className="text-gold" size={48} /></div>
+                <h3 data-publisher-field="about.philosophy2Title" className="text-xl font-display font-bold text-dark mb-3">{t('about.philosophy2Title')}</h3>
+                <p data-publisher-field="about.philosophy2Text" className="text-dark/70 font-body">{t('about.philosophy2Text')}</p>
               </div>
               <div className="text-center">
-                <div className="flex justify-center mb-4">
-                  <Heart className="text-gold" size={48} />
-                </div>
-                <h3 className="text-xl font-display font-bold text-dark mb-3">{t('about.philosophy3Title')}</h3>
-                <p className="text-dark/70 font-body">
-                  {t('about.philosophy3Text')}
-                </p>
+                <div className="flex justify-center mb-4"><Heart className="text-gold" size={48} /></div>
+                <h3 data-publisher-field="about.philosophy3Title" className="text-xl font-display font-bold text-dark mb-3">{t('about.philosophy3Title')}</h3>
+                <p data-publisher-field="about.philosophy3Text" className="text-dark/70 font-body">{t('about.philosophy3Text')}</p>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="py-20 bg-background">
+        <section data-publisher-section="team" className="py-20 bg-background">
           <div className="container mx-auto px-6">
-            <SectionTitle
-              title={t('about.teamTitle')}
-              subtitle={t('about.teamSubtitle')}
-            />
+            <SectionTitle title={t('about.teamTitle')} subtitle={t('about.teamSubtitle')} />
             <div className="text-center max-w-3xl mx-auto">
-              <p className="text-lg text-dark/80 font-body">
-                {t('about.teamText')}
-              </p>
+              <p data-publisher-field="about.teamText" className="text-lg text-dark/80 font-body">{t('about.teamText')}</p>
             </div>
           </div>
         </section>

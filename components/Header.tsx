@@ -20,13 +20,14 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const l = (path: string) => `/${language}${path}`;
   const navLinks = [
-    { href: '/', label: t('header.home') },
-    { href: '/about', label: t('header.about') },
-    { href: '/suites', label: t('header.suites') },
-    { href: '/gallery', label: t('header.gallery') },
-    { href: '/around', label: t('header.around') },
-    { href: '/contact', label: t('header.contact') },
+    { href: l('/'), label: t('header.home') },
+    { href: l('/about'), label: t('header.about') },
+    { href: l('/suites'), label: t('header.suites') },
+    { href: l('/gallery'), label: t('header.gallery') },
+    { href: l('/around'), label: t('header.around') },
+    { href: l('/contact'), label: t('header.contact') },
   ];
 
   const handleLinkClick = () => {
@@ -38,6 +39,7 @@ export default function Header() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6 }}
+      data-publisher-section="nav"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled ? 'bg-background shadow-lg' : 'bg-transparent'
       }`}

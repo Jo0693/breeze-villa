@@ -1,0 +1,74 @@
+'use client';
+
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import Hero from '@/components/Hero';
+import SectionTitle from '@/components/SectionTitle';
+import Card from '@/components/Card';
+import { Home, Wifi, Tv, Coffee, Wind, Droplet, Smartphone, Star } from 'react-feather';
+import { useTranslation } from 'react-i18next';
+import SEOHead from '@/components/SEOHead';
+import { useLanguage } from '@/contexts/LanguageContext';
+
+export default function SuitesPage() {
+  const { t } = useTranslation();
+  const { language } = useLanguage();
+  const l = (path: string) => `/${language}${path}`;
+
+  const suites = [
+    { title: t('suites.suite1.name'), description: t('suites.suite1.description'), image: 'https://images.unsplash.com/photo-1582719508461-905c673771fd?q=80&w=2940', price: t('suites.suite1.price') },
+    { title: t('suites.suite2.name'), description: t('suites.suite2.description'), image: 'https://images.unsplash.com/photo-1591088398332-8a7791972843?q=80&w=2940', price: t('suites.suite2.price') },
+    { title: t('suites.suite3.name'), description: t('suites.suite3.description'), image: 'https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=2940', price: t('suites.suite3.price') },
+    { title: t('suites.suite4.name'), description: t('suites.suite4.description'), image: 'https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=2940', price: t('suites.suite4.price') },
+  ];
+
+  return (
+    <>
+      <SEOHead
+        title="Suites – Ocean Views, Private Pools, Premium Amenities | Breeze Villa"
+        description="Discover Ocean Horizon Suite, Garden Oasis Villa, Sunset Pavilion, and Presidential Sanctuary. Luxury accommodations from $450/night."
+        canonical="https://breeze-villa.vercel.app/suites"
+      />
+      <Header />
+      <main>
+        <Hero
+          title={t('suites.title')}
+          subtitle={t('suites.subtitle')}
+          height="h-[60vh]"
+          backgroundImage="https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=2940"
+        />
+
+        <section data-publisher-section="suites" className="py-20 bg-background">
+          <div className="container mx-auto px-6">
+            <SectionTitle title={t('home.suitesCard.title')} subtitle={t('suites.subtitle')} />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+              {suites.map((suite, index) => (
+                <Card key={suite.title} title={suite.title} description={suite.description} image={suite.image} price={suite.price} link={l('/contact')} buttonText={t('home.heroCta')} delay={index * 0.1} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section data-publisher-section="amenities" className="py-20 bg-accent">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-12">
+              <h2 data-publisher-field="suites.amenitiesTitle" className="text-4xl md:text-5xl font-display italic font-bold text-gold mb-4">{t('suites.amenitiesTitle')}</h2>
+              <p data-publisher-field="suites.amenitiesSubtitle" className="text-lg text-dark/70 font-body max-w-2xl mx-auto">{t('suites.amenitiesSubtitle')}</p>
+            </div>
+            <div className="flex flex-wrap justify-center items-center gap-x-8 gap-y-6">
+              <div className="flex items-center space-x-2"><Home className="text-gold" size={20} /><span className="font-body text-dark">{t('home.suitesCard.title')}</span></div>
+              <div className="flex items-center space-x-2"><Wifi className="text-gold" size={20} /><span className="font-body text-dark">High-Speed WiFi</span></div>
+              <div className="flex items-center space-x-2"><Tv className="text-gold" size={20} /><span className="font-body text-dark">Smart TV</span></div>
+              <div className="flex items-center space-x-2"><Coffee className="text-gold" size={20} /><span className="font-body text-dark">Minibar</span></div>
+              <div className="flex items-center space-x-2"><Wind className="text-gold" size={20} /><span className="font-body text-dark">Air Conditioning</span></div>
+              <div className="flex items-center space-x-2"><Droplet className="text-gold" size={20} /><span className="font-body text-dark">Luxury Bathroom</span></div>
+              <div className="flex items-center space-x-2"><Smartphone className="text-gold" size={20} /><span className="font-body text-dark">Concierge Service</span></div>
+              <div className="flex items-center space-x-2"><Star className="text-gold" size={20} /><span className="font-body text-dark">Premium Toiletries</span></div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}

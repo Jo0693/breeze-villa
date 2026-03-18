@@ -1,0 +1,130 @@
+{
+  "fr": {
+    "hero": {
+      "title": "Explorer le Paradis",
+      "subtitle": "Découvrez les merveilles entourant Breeze Villa",
+      "image": "",
+      "image_alt": ""
+    },
+    "attractions": {
+      "title": "Trésors à Proximité",
+      "items": [
+        {
+          "title": "Plage du Coucher de Soleil",
+          "description": "Du sable blanc immaculé rencontre des eaux cristallines à seulement 50 mètres de votre villa. Nagez, explorez les récifs coralliens vibrants, ou simplement détendez-vous sous les palmiers en regardant les levers de soleil envoûtants peindre l'horizon."
+        },
+        {
+          "title": "Warung Pantai",
+          "description": "Une expérience culinaire balinaise authentique mettant en vedette les fruits de mer les plus frais et des recettes traditionnelles transmises de génération en génération. Ce joyau familial offre de véritables saveurs insulaires dans un cadre charmant en bord de mer."
+        },
+        {
+          "title": "Point de Vue sur la Falaise",
+          "description": "Un sanctuaire caché offrant les vues de coucher de soleil les plus spectaculaires de Bali. Cet endroit serein, à seulement 15 minutes, offre le décor parfait pour des cocktails du soir et des photographies inoubliables."
+        },
+        {
+          "title": "Temple Tanah Lot & Marché",
+          "description": "Plongez dans la spiritualité balinaise dans ce temple marin emblématique, puis explorez les marchés locaux vibrants regorgeant de textiles artisanaux, bijoux en argent et épices aromatiques."
+        }
+      ]
+    },
+    "activities": {
+      "title": "Expériences Organisées",
+      "subtitle": "Aventures inoubliables organisées par notre conciergerie",
+      "items": [
+        {
+          "title": "Plongée & Snorkeling",
+          "description": "Explorez des jardins de corail prospères grouillant de vie marine tropicale, des tortues de mer gracieuses aux poissons de récif vibrants"
+        },
+        {
+          "title": "Aventures Aquatiques",
+          "description": "Expériences de surf, paddle, kayak et voile adaptées à votre niveau de compétence"
+        },
+        {
+          "title": "Randonnée en Montagne",
+          "description": "Randonnées au lever du soleil vers le volcan Mont Batur, cascades cachées et sentiers secrets de la jungle"
+        },
+        {
+          "title": "Bien-Être & Spa",
+          "description": "Massage balinais traditionnel, séances de yoga et traitements de guérison holistiques"
+        },
+        {
+          "title": "Voyages Culinaires",
+          "description": "Cours de cuisine, visites de marchés et expériences gastronomiques privées avec des chefs locaux renommés"
+        },
+        {
+          "title": "Immersion Culturelle",
+          "description": "Cérémonies de temple, spectacles de danse traditionnelle et visites d'ateliers d'artisans"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Laissez-Nous Créer Votre Journée Parfaite",
+      "subtitle": "Notre équipe de conciergerie experte organise chaque détail",
+      "button": "Contacter la Conciergerie"
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "Explore Paradise",
+      "subtitle": "Discover the wonders surrounding Breeze Villa",
+      "image": "",
+      "image_alt": ""
+    },
+    "attractions": {
+      "title": "Nearby Treasures",
+      "items": [
+        {
+          "title": "Sunset Beach",
+          "description": "Pristine white sand meets crystal-clear waters just 50 meters from your villa. Swim, snorkel vibrant coral reefs, or simply relax beneath swaying palms while watching mesmerizing sunrises paint the horizon."
+        },
+        {
+          "title": "Warung Pantai",
+          "description": "An authentic Balinese dining experience featuring the freshest seafood and traditional recipes passed through generations. This family-owned gem offers genuine island flavors in a charming beachfront setting."
+        },
+        {
+          "title": "Clifftop Viewpoint",
+          "description": "A hidden sanctuary offering Bali's most spectacular sunset vistas. This serene spot, just 15 minutes away, provides the perfect backdrop for evening cocktails and unforgettable photographs."
+        },
+        {
+          "title": "Tanah Lot Temple & Market",
+          "description": "Immerse yourself in Balinese spirituality at this iconic sea temple, then explore vibrant local markets brimming with handcrafted textiles, silver jewelry, and aromatic spices."
+        }
+      ]
+    },
+    "activities": {
+      "title": "Curated Experiences",
+      "subtitle": "Unforgettable adventures arranged by our concierge",
+      "items": [
+        {
+          "title": "Diving & Snorkeling",
+          "description": "Explore thriving coral gardens teeming with tropical marine life, from graceful sea turtles to vibrant reef fish"
+        },
+        {
+          "title": "Water Adventures",
+          "description": "Surfing, paddleboarding, kayaking, and sailing experiences tailored to your skill level"
+        },
+        {
+          "title": "Mountain Trekking",
+          "description": "Sunrise hikes to Mount Batur volcano, hidden waterfalls, and secret jungle trails"
+        },
+        {
+          "title": "Wellness & Spa",
+          "description": "Traditional Balinese massage, yoga sessions, and holistic healing treatments"
+        },
+        {
+          "title": "Culinary Journeys",
+          "description": "Cooking classes, market tours, and private dining experiences with renowned local chefs"
+        },
+        {
+          "title": "Cultural Immersion",
+          "description": "Temple ceremonies, traditional dance performances, and artisan workshop visits"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Let Us Craft Your Perfect Day",
+      "subtitle": "Our expert concierge team arranges every detail",
+      "button": "Contact Concierge"
+    }
+  }
+}

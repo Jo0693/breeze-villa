@@ -1,0 +1,24 @@
+{
+  "fr": {
+    "hero": {
+      "title": "Voyage Visuel",
+      "subtitle": "Découvrez la beauté et l'élégance qui définissent Breeze Villa",
+      "image": "",
+      "image_alt": ""
+    },
+    "gallery": {
+      "lightboxNote": "Cliquez sur n'importe quelle image pour l'afficher en plein écran"
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "Visual Journey",
+      "subtitle": "Discover the beauty and elegance that defines Breeze Villa",
+      "image": "",
+      "image_alt": ""
+    },
+    "gallery": {
+      "lightboxNote": "Click any image to view in full screen"
+    }
+  }
+}

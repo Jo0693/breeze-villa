@@ -1,0 +1,48 @@
+{
+  "fr": {
+    "hero": {
+      "title": "Échappez-Vous au Paradis",
+      "subtitle": "Vivez un luxe inégalé dans notre sanctuaire exclusif en bord de mer",
+      "cta": "Découvrir Nos Suites",
+      "image": "",
+      "image_alt": ""
+    },
+    "intro": {
+      "title": "Où les Rêves Deviennent Réalité",
+      "subtitle": "Nichée le long du littoral immaculé de Bali, Breeze Villa offre une expérience de luxe intime où l'élégance contemporaine s'harmonise avec la beauté tropicale."
+    },
+    "testimonial": {
+      "title": "Expériences de Nos Hôtes",
+      "quote": "Breeze Villa a redéfini le luxe pour nous. De l'architecture à couper le souffle au service impeccable, chaque détail a dépassé nos plus hautes attentes.",
+      "author": "Emma & Thomas Richardson, Londres, Royaume-Uni"
+    },
+    "cta": {
+      "title": "Commencez Votre Voyage",
+      "subtitle": "Découvrez pourquoi Breeze Villa est le refuge le plus exclusif de Bali",
+      "button": "Réserver Votre Suite"
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "Escape to Paradise",
+      "subtitle": "Experience unparalleled luxury in our exclusive beachfront sanctuary",
+      "cta": "Discover Our Suites",
+      "image": "",
+      "image_alt": ""
+    },
+    "intro": {
+      "title": "Where Dreams Meet Reality",
+      "subtitle": "Nestled along Bali's pristine coastline, Breeze Villa offers an intimate luxury experience where contemporary elegance harmonizes with tropical beauty."
+    },
+    "testimonial": {
+      "title": "Guest Experiences",
+      "quote": "Breeze Villa redefined luxury for us. From the breathtaking architecture to the impeccable service, every detail exceeded our highest expectations.",
+      "author": "Emma & Thomas Richardson, London, United Kingdom"
+    },
+    "cta": {
+      "title": "Begin Your Journey",
+      "subtitle": "Discover why Breeze Villa is Bali's most exclusive retreat",
+      "button": "Reserve Your Suite"
+    }
+  }
+}

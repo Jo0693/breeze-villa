@@ -1,0 +1,62 @@
+{
+  "fr": {
+    "hero": {
+      "title": "Contactez-Nous",
+      "subtitle": "Commencez à planifier votre évasion inoubliable",
+      "image": "",
+      "image_alt": ""
+    },
+    "form": {
+      "title": "Envoyez-Nous un Message",
+      "name": "Nom Complet",
+      "email": "Adresse Email",
+      "arrival": "Date d'Arrivée",
+      "departure": "Date de Départ",
+      "messageLabel": "Parlez-nous de votre escapade de rêve",
+      "messagePlaceholder": "Partagez vos préférences, occasions spéciales ou toute question que vous pourriez avoir...",
+      "submitButton": "Envoyer la Demande",
+      "successMessage": "Merci pour votre message ! Nous vous répondrons bientôt."
+    },
+    "visit": {
+      "title": "Visitez-Nous",
+      "addressLabel": "Adresse",
+      "address": "Sunset Beach Road, Bali 80361, Indonésie",
+      "phoneLabel": "Téléphone",
+      "phone": "+62 361 847 5678",
+      "emailLabel": "Email",
+      "email": "reservations@breezevilla.com",
+      "hoursLabel": "Réservations",
+      "hours": "Disponible 24h/24 et 7j/7"
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "Get in Touch",
+      "subtitle": "Begin planning your unforgettable escape",
+      "image": "",
+      "image_alt": ""
+    },
+    "form": {
+      "title": "Send Us a Message",
+      "name": "Full Name",
+      "email": "Email Address",
+      "arrival": "Arrival Date",
+      "departure": "Departure Date",
+      "messageLabel": "Tell us about your dream getaway",
+      "messagePlaceholder": "Share your preferences, special occasions, or any questions you may have...",
+      "submitButton": "Send Inquiry",
+      "successMessage": "Thank you for your message! We will get back to you soon."
+    },
+    "visit": {
+      "title": "Visit Us",
+      "addressLabel": "Address",
+      "address": "Sunset Beach Road, Bali 80361, Indonesia",
+      "phoneLabel": "Phone",
+      "phone": "+62 361 847 5678",
+      "emailLabel": "Email",
+      "email": "reservations@breezevilla.com",
+      "hoursLabel": "Reservations",
+      "hours": "Available 24/7"
+    }
+  }
+}

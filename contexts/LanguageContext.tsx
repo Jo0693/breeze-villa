@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useEffect } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 import { useTranslation } from 'react-i18next';
 import '../i18n';
 
@@ -15,24 +16,27 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const { i18n } = useTranslation();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  // Auto-detect locale from URL path
+  const detectedLocale: Language = pathname.startsWith('/en') ? 'en' : 'fr';
 
   useEffect(() => {
-    // Load language from localStorage on mount
-    const savedLanguage = localStorage.getItem('language') as Language;
-    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'fr')) {
-      i18n.changeLanguage(savedLanguage);
+    if (i18n.language !== detectedLocale) {
+      i18n.changeLanguage(detectedLocale);
     }
-  }, [i18n]);
+  }, [detectedLocale, i18n]);
 
   const setLanguage = (lang: Language) => {
-    i18n.changeLanguage(lang);
-    localStorage.setItem('language', lang);
+    // Navigate to the equivalent route in the target locale
+    const currentPath = pathname;
+    const strippedPath = currentPath.replace(/^\/(fr|en)/, '') || '/';
+    router.push(`/${lang}${strippedPath === '/' ? '' : strippedPath}`);
   };
 
-  const currentLanguage = (i18n.language || 'en') as Language;
-
   return (
-    <LanguageContext.Provider value={{ language: currentLanguage, setLanguage }}>
+    <LanguageContext.Provider value={{ language: detectedLocale, setLanguage }}>
       {children}
     </LanguageContext.Provider>
   );
