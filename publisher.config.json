@@ -1,22 +1,6 @@
 {
-  "nom": "Breeze Villa",
-  "framework": "nextjs",
-  "version": "1.0.0",
-  "design": {
-    "police_principale": "Playfair Display",
-    "police_secondaire": "Inter",
-    "couleurs": {
-      "primaire": "#C9A45C",
-      "secondaire": "#E6DDC6",
-      "fond": "#F8F6F1",
-      "texte": "#1E1E1E"
-    }
-  },
-  "i18n": {
-    "actif": true,
-    "langue_par_defaut": "fr",
-    "langues": ["fr", "en"]
-  },
+  "projet": "Breeze Villa — Location de luxe",
+  "version": "1.0",
   "pages": [
     {
       "id": "home",
@@ -60,5 +44,38 @@
       "fichier_contenu": "content/around.json",
       "fichier_seo": "seo-data/around.seo.json"
     }
-  ]
+  ],
+  "design": {
+    "fichier_tokens": "styles/tokens.css",
+    "couleur_primaire": "#C9A45C",
+    "couleur_secondaire": "#F8F6F1",
+    "couleur_accent": "#E6DDC6",
+    "font_principale": "Playfair Display",
+    "font_secondaire": "Inter",
+    "fonts_disponibles": ["Playfair Display", "Inter", "Lora", "Montserrat"]
+  },
+  "images": {
+    "dossier": "public/images/"
+  },
+  "i18n": {
+    "actif": true,
+    "langues": ["fr", "en"],
+    "langue_defaut": "fr"
+  },
+  "formulaire": {
+    "service": "",
+    "email_destination": ""
+  },
+  "analytics": {
+    "provider": "",
+    "id": ""
+  },
+  "deployment": {
+    "vercel_project": "breeze-villa",
+    "branch": "main"
+  },
+  "effects": {
+    "fichier_config": "effects.config.json",
+    "runtime_installed": false
+  }
 }
