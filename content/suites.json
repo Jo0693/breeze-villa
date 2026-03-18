@@ -1,0 +1,86 @@
+{
+  "fr": {
+    "hero": {
+      "title": "Suites Luxueuses",
+      "subtitle": "Sanctuaires soigneusement conçus offrant confort et style sans compromis",
+      "image": "",
+      "image_alt": ""
+    },
+    "suites": [
+      {
+        "name": "Suite Horizon Océan",
+        "description": "Des vues panoramiques sur l'océan rencontrent l'élégance contemporaine dans ce sanctuaire de 65m². Les baies vitrées encadrent des horizons bleus infinis tandis que votre terrasse privée offre le point de vue parfait pour des levers de soleil spectaculaires.",
+        "price": "À partir de 450$/nuit",
+        "image": "",
+        "image_alt": ""
+      },
+      {
+        "name": "Villa Oasis Jardin",
+        "description": "Entourée de jardins tropicaux luxuriants, cette villa privée de 85m² dispose d'une douche extérieure à effet pluie et d'un accès direct à la piscine. Vivez l'harmonie parfaite entre luxe intérieur et tranquillité extérieure.",
+        "price": "À partir de 650$/nuit",
+        "image": "",
+        "image_alt": ""
+      },
+      {
+        "name": "Pavillon Coucher de Soleil",
+        "description": "Une retraite exclusive de 120m² dotée d'une piscine à débordement privée parfaitement alignée avec les couchers de soleil légendaires de Bali. Ce chef-d'œuvre architectural redéfinit le luxe de vie.",
+        "price": "À partir de 950$/nuit",
+        "image": "",
+        "image_alt": ""
+      },
+      {
+        "name": "Sanctuaire Présidentiel",
+        "description": "L'expression ultime du luxe. S'étendant sur 200m², ce havre de trois chambres comprend un chef privé, un service de majordome, une piscine à débordement et des panoramas océaniques à 270 degrés sans obstruction.",
+        "price": "À partir de 1 800$/nuit",
+        "image": "",
+        "image_alt": ""
+      }
+    ],
+    "amenities": {
+      "title": "Équipements Premium",
+      "subtitle": "Chaque détail considéré pour votre confort ultime"
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "Luxurious Suites",
+      "subtitle": "Carefully designed sanctuaries offering uncompromising comfort and style",
+      "image": "",
+      "image_alt": ""
+    },
+    "suites": [
+      {
+        "name": "Ocean Horizon Suite",
+        "description": "Panoramic ocean views meet contemporary elegance in this 65m² sanctuary. Floor-to-ceiling windows frame endless blue horizons while your private terrace offers the perfect vantage point for spectacular sunrises.",
+        "price": "From $450/night",
+        "image": "",
+        "image_alt": ""
+      },
+      {
+        "name": "Garden Oasis Villa",
+        "description": "Surrounded by lush tropical gardens, this 85m² private villa features an outdoor rain shower and direct pool access. Experience perfect harmony between indoor luxury and outdoor tranquility.",
+        "price": "From $650/night",
+        "image": "",
+        "image_alt": ""
+      },
+      {
+        "name": "Sunset Pavilion",
+        "description": "An exclusive 120m² retreat featuring a private infinity pool perfectly aligned with Bali's legendary sunsets. This architectural masterpiece redefines luxury living.",
+        "price": "From $950/night",
+        "image": "",
+        "image_alt": ""
+      },
+      {
+        "name": "Presidential Sanctuary",
+        "description": "The ultimate expression of luxury. Spanning 200m², this three-bedroom haven includes a private chef, butler service, infinity pool, and unobstructed 270-degree ocean panoramas.",
+        "price": "From $1,800/night",
+        "image": "",
+        "image_alt": ""
+      }
+    ],
+    "amenities": {
+      "title": "Premium Amenities",
+      "subtitle": "Every detail considered for your ultimate comfort"
+    }
+  }
+}

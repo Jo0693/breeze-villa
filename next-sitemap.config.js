@@ -14,12 +14,22 @@ module.exports = {
   generateIndexSitemap: false,
   changefreq: 'weekly',
   priority: 0.7,
+  additionalPaths: async (config) => {
+    const locales = ['fr', 'en'];
+    const pages = ['', '/about', '/suites', '/gallery', '/contact', '/around'];
+    const paths = [];
+    for (const locale of locales) {
+      for (const page of pages) {
+        paths.push(await config.transform(config, `/${locale}${page}`));
+      }
+    }
+    return paths;
+  },
   transform: async (config, path) => {
-    // Custom priority for different pages
     let priority = 0.7;
-    if (path === '/') priority = 1.0;
-    if (path === '/suites' || path === '/contact') priority = 0.9;
-    if (path === '/about' || path === '/gallery') priority = 0.8;
+    if (path === '/' || path === '/fr' || path === '/en') priority = 1.0;
+    if (path.includes('/suites') || path.includes('/contact')) priority = 0.9;
+    if (path.includes('/about') || path.includes('/gallery')) priority = 0.8;
 
     return {
       loc: path,

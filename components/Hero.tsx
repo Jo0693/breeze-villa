@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useRef } from 'react';
 
 interface HeroProps {
@@ -10,6 +11,8 @@ interface HeroProps {
   ctaText?: string;
   ctaLink?: string;
   backgroundImage?: string;
+  publisherImage?: string;
+  publisherImageAlt?: string;
   height?: string;
 }
 
@@ -19,6 +22,8 @@ export default function Hero({
   ctaText,
   ctaLink,
   backgroundImage = 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=2940',
+  publisherImage,
+  publisherImageAlt,
   height = 'h-screen',
 }: HeroProps) {
   const ref = useRef(null);
@@ -30,22 +35,37 @@ export default function Hero({
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '15%']);
 
   return (
-    <div ref={ref} className={`relative ${height} overflow-hidden`}>
-      <motion.div
-        style={{ y }}
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 10, ease: 'easeOut' }}
-        className="absolute inset-0 will-change-transform"
-      >
-        <div
-          className="w-full h-full bg-cover bg-center"
-          style={{
-            backgroundImage: `url(${backgroundImage})`,
-          }}
-        />
-        <div className="absolute inset-0 bg-black/40" />
-      </motion.div>
+    <div ref={ref} data-publisher-section="hero" className={`relative ${height} overflow-hidden`}>
+      {publisherImage ? (
+        <>
+          <Image
+            src={publisherImage}
+            alt={publisherImageAlt || ''}
+            fill
+            className="object-cover"
+            priority
+            data-publisher-field="hero.image"
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </>
+      ) : (
+        <motion.div
+          style={{ y }}
+          initial={{ scale: 1.1 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 10, ease: 'easeOut' }}
+          className="absolute inset-0 will-change-transform"
+        >
+          <div
+            className="w-full h-full bg-cover bg-center"
+            style={{
+              backgroundImage: `url(${backgroundImage})`,
+            }}
+            data-publisher-field="hero.image"
+          />
+          <div className="absolute inset-0 bg-black/40" />
+        </motion.div>
+      )}
 
       <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
         <div>
@@ -54,6 +74,7 @@ export default function Hero({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-5xl md:text-7xl font-display font-bold text-white mb-6"
+            data-publisher-field="hero.title"
           >
             {title}
           </motion.h1>
@@ -64,6 +85,7 @@ export default function Hero({
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl md:text-2xl text-white/90 font-body mb-8"
+              data-publisher-field="hero.subtitle"
             >
               {subtitle}
             </motion.p>

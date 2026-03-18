@@ -1,0 +1,74 @@
+{
+  "fr": {
+    "hero": {
+      "title": "Notre Histoire",
+      "subtitle": "Un sanctuaire né de la passion et du sens",
+      "image": "",
+      "image_alt": ""
+    },
+    "story": {
+      "title": "La Vision Derrière Breeze Villa",
+      "paragraph1": "Breeze Villa est née d'un rêve de créer un sanctuaire extraordinaire où la brillance architecturale rencontre la splendeur naturelle. Fondée en 2019, notre propriété boutique représente l'aboutissement d'un design méticuleux, d'un luxe durable et d'un profond respect pour la culture balinaise.",
+      "paragraph2": "Chaque élément de Breeze Villa a été soigneusement conçu pour offrir aux voyageurs exigeants une évasion intime. Du bois de teck d'origine locale aux meubles balinais fabriqués à la main, nous mélangeons sophistication contemporaine et héritage insulaire authentique pour créer une expérience qui transcende l'hospitalité ordinaire."
+    },
+    "philosophy": {
+      "title": "Notre Philosophie",
+      "subtitle": "Trois piliers qui définissent notre engagement envers l'excellence",
+      "items": [
+        {
+          "title": "Luxe Durable",
+          "text": "Nous croyons que le vrai luxe respecte l'environnement. Nos pratiques éco-conscientes, de l'énergie solaire aux jardins biologiques, garantissent que votre séjour a un impact minimal tout en maximisant le confort."
+        },
+        {
+          "title": "Expériences Authentiques",
+          "text": "Au-delà de l'hébergement, nous créons des connexions significatives avec la culture balinaise, les artisans locaux et les merveilles naturelles, créant des souvenirs qui durent toute une vie."
+        },
+        {
+          "title": "Service Personnalisé",
+          "text": "Vos désirs façonnent votre expérience. Notre personnel dévoué anticipe vos besoins, offrant des services sur mesure qui transforment votre séjour en quelque chose de vraiment extraordinaire."
+        }
+      ]
+    },
+    "team": {
+      "title": "L'Équipe",
+      "subtitle": "Professionnels passionnés dédiés à votre évasion parfaite",
+      "text": "Notre équipe internationale rassemble des vétérans de l'hospitalité, des experts culturels locaux et des spécialistes du bien-être. Unis par une passion pour l'excellence, ils garantissent que chaque invité reçoit des soins personnalisés qui dépassent les attentes. De notre chef primé à nos praticiens certifiés en bien-être, chaque membre contribue à la magie de Breeze Villa."
+    }
+  },
+  "en": {
+    "hero": {
+      "title": "Our Story",
+      "subtitle": "A sanctuary born from passion and purpose",
+      "image": "",
+      "image_alt": ""
+    },
+    "story": {
+      "title": "The Vision Behind Breeze Villa",
+      "paragraph1": "Breeze Villa emerged from a dream to create an extraordinary sanctuary where architectural brilliance meets natural splendor. Founded in 2019, our boutique property represents the culmination of meticulous design, sustainable luxury, and a deep respect for Balinese culture.",
+      "paragraph2": "Every element of Breeze Villa has been thoughtfully curated to offer discerning travelers an intimate escape. From locally-sourced teak wood to handcrafted Balinese furnishings, we blend contemporary sophistication with authentic island heritage to create an experience that transcends ordinary hospitality."
+    },
+    "philosophy": {
+      "title": "Our Philosophy",
+      "subtitle": "Three pillars that define our commitment to excellence",
+      "items": [
+        {
+          "title": "Sustainable Luxury",
+          "text": "We believe true luxury respects the environment. Our eco-conscious practices, from solar energy to organic gardens, ensure your stay leaves minimal impact while maximizing comfort."
+        },
+        {
+          "title": "Authentic Experiences",
+          "text": "Beyond accommodation, we curate meaningful connections with Balinese culture, local artisans, and natural wonders, creating memories that last a lifetime."
+        },
+        {
+          "title": "Personalized Service",
+          "text": "Your desires shape your experience. Our dedicated staff anticipates your needs, offering bespoke services that transform your stay into something truly extraordinary."
+        }
+      ]
+    },
+    "team": {
+      "title": "The Team",
+      "subtitle": "Passionate professionals dedicated to your perfect escape",
+      "text": "Our international team brings together hospitality veterans, local cultural experts, and wellness specialists. United by a passion for excellence, they ensure every guest receives personalized care that exceeds expectations. From our award-winning chef to our certified wellness practitioners, each member contributes to the magic of Breeze Villa."
+    }
+  }
+}

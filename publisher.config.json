@@ -1,0 +1,64 @@
+{
+  "nom": "Breeze Villa",
+  "framework": "nextjs",
+  "version": "1.0.0",
+  "design": {
+    "police_principale": "Playfair Display",
+    "police_secondaire": "Inter",
+    "couleurs": {
+      "primaire": "#C9A45C",
+      "secondaire": "#E6DDC6",
+      "fond": "#F8F6F1",
+      "texte": "#1E1E1E"
+    }
+  },
+  "i18n": {
+    "actif": true,
+    "langue_par_defaut": "fr",
+    "langues": ["fr", "en"]
+  },
+  "pages": [
+    {
+      "id": "home",
+      "nom": "Accueil",
+      "route": "/",
+      "fichier_contenu": "content/home.json",
+      "fichier_seo": "seo-data/home.seo.json"
+    },
+    {
+      "id": "about",
+      "nom": "À propos",
+      "route": "/about",
+      "fichier_contenu": "content/about.json",
+      "fichier_seo": "seo-data/about.seo.json"
+    },
+    {
+      "id": "suites",
+      "nom": "Suites",
+      "route": "/suites",
+      "fichier_contenu": "content/suites.json",
+      "fichier_seo": "seo-data/suites.seo.json"
+    },
+    {
+      "id": "gallery",
+      "nom": "Galerie",
+      "route": "/gallery",
+      "fichier_contenu": "content/gallery.json",
+      "fichier_seo": "seo-data/gallery.seo.json"
+    },
+    {
+      "id": "contact",
+      "nom": "Contact",
+      "route": "/contact",
+      "fichier_contenu": "content/contact.json",
+      "fichier_seo": "seo-data/contact.seo.json"
+    },
+    {
+      "id": "around",
+      "nom": "Aux alentours",
+      "route": "/around",
+      "fichier_contenu": "content/around.json",
+      "fichier_seo": "seo-data/around.seo.json"
+    }
+  ]
+}
